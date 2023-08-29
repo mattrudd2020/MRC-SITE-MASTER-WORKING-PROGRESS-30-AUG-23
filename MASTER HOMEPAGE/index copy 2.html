@@ -1,0 +1,746 @@
+<html class="no-js is-home" lang="">
+
+<head>
+  <meta charset="utf-8" />
+  <title>How to create page transitions tutorial - Barba.js</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/transition.css" rel="stylesheet">
+
+</head>
+
+
+<body data-barba="wrapper">
+
+
+  <!-- ELEMENT ON LOAD - WORK OUT BARBA!  
+
+<nav class="overlay-nav" style="opacity: 0; visibility: hidden;">
+  <svg class="overlay-nav_bg" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <path class="overlay-nav_path" vector-effect="non-scaling-stroke" d="M 0 0 V 0 Q 50 0 100 0 V 0 z"></path>
+</svg>
+</nav> -->
+
+
+
+  <div class="transition clip"></div>
+
+  <svg id="loadersvg" viewBox="0 0 1 1" preserveAspectRatio="none">
+    <clipPath id="clippath" clipPathUnits="objectBoundingBox">
+      <path class="swipeup" d="M 0 1 V 1 Q 0.5 1 1 1 V 1 z" />
+    </clipPath>
+  </svg>
+
+  <div class="lightbox" id="lightbox-close">
+    <div class="lightbox__top lightbox-bar"></div>
+    <div class="lightbox__content">
+      <video id="video" width="100%" height="100%" controls playsinline>
+        <source src="video/SHOWREEL FINAL!.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="lightbox__bottom lightbox-bar"></div>
+  </div>
+
+
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+
+ 
+
+        <main data-barba="container" data-barba-namespace="index">
+
+
+
+          <!-- START TEXT FADE AND SWITCH -->
+          <section class="text-container">
+
+            <div class="panel first">
+              <div class="text text1">
+                Cut
+              </div>
+              <div class="text text2">
+                through
+              </div>
+              <div class="text text2">
+                the
+              </div>
+              <div class="stage text text3">
+                <svg width="1000" height="1000" id="demo" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="50 -282 1000 1000">
+                  <defs>
+                    <pattern id="slicePattern" patternUnits="userSpaceOnUse" width="1000" height="800" x="0" y="0"><text
+                        transform="translate(550 250)" text-anchor="middle" font-size="1.35em" fill="#fff">noise</text>
+                    </pattern>
+                  </defs>
+
+                  <g fill="url(#slicePattern)">
+                    <polygon id="slide1" points="0,150 551,150 201,400 0,400" />
+                    <polygon id="slide2" points="549,150 1000,400 999,400 1000,150" />
+                    <polygon points="200,400 550,150 1000,400" />
+                  </g>
+
+                  <line x1="550" y1="150" x2="200" y2="400" stroke-width="1" stroke="white" />
+                  <line x1="550" y1="150" x2="1000" y2="400" stroke-width="1" stroke="white" />
+
+                </svg>
+              </div>
+            </div>
+
+            <div class="panel second cursor-color">
+              <div id="para-text">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum."
+              </div>
+            </div>
+          </section>
+          <!-- END TEXT FADE AND SWITCH -->
+          
+          <!-- START TICKER SECTION -->
+
+          <div class="homepage-ticker-container">
+            <section class="homepage-ticker" id="homepage-services">
+              <div class="homepage-container-fluid">
+                <span>Creative Direction &#9679; Copywriting &#9679; Content Strategy &#9679;</span>
+              </div>
+            </section>
+            <section class="homepage-ticker" id="homepage-services2">
+              <div class="homepage-container-fluid2">
+                <span>Photography &#9679; Videography &#9679; Animation &#9679;</span>
+              </div>
+            </section>
+            <section class="homepage-ticker" id="homepage-services3">
+              <div class="homepage-container-fluid3">
+                <span>Graphic Design &#9679; Branding &#9679; Web Design &#9679;</span>
+              </div>
+            </section>
+            <div class="spacer"></div>
+          </div>
+
+          <!-- END TICKER SECTION -->
+
+          <!-- START SHOWREEL CONTAINER-->
+
+
+          <section class="showreel-section">
+            <div class="showreel">
+              <div id="video-block" class="followerchangetest" data-follower-text="PLAY">
+                <span class="subheader_text">SHOWREEL</span>
+                <span class="paragraph_text">A SPIN THROUGH A SELECTION OF WORK</span></div>
+            </div>
+          </section>
+
+
+          <div class="why" id="play"></div>
+
+          <!--START HOVER-LIST CONTAINER-->
+
+<div class="squashed-globe-container ">
+  <lottie-player class="squashed-globe" src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/lottie/MR+LOGO+BLACK+FOR+HEADER.json" background="transparent"  speed="1"  style="width: 150px; height: 150px;" loop autoplay></lottie-player>
+</div>
+<!-- 
+          <div class="hover-image"></div>
+          <div class="hover-wrapper">
+            <div class="project-list">
+         <a href="creative-direction.html"><div class="project p-1">
+                <div class="project-title">
+                  <h1>Creative Direction</h1>
+                </div>
+                <div class="project-categ">Branding</div>
+                <div class="project-overlay"></div>
+              </div></a>
+              <a href="content-strategy.html"><div class="project p-2">
+                <div class="project-title">
+                  <h1>Content Strategy</h1>
+                </div>
+                <div class="project-categ">Web Design</div>
+                <div class="project-overlay"></div>
+              </div></a>
+              <a href="copywriting.html"><div class="project p-3">
+                <div class="project-title">
+                  <h1>Copywriting</h1>
+                </div>
+                <div class="project-categ">Web Design</div>
+                <div class="project-overlay"></div>
+              </div></a>
+              <div class="project p-4">
+                <div class="project-title">
+                  <h1>Animation</h1>
+                </div>
+                <div class="project-categ">Web Design</div>
+                <div class="project-overlay"></div>
+              </div>
+              <a href="gallery.html"><div class="project p-5">
+                <div class="project-title">
+                  <h1>Photography</h1>
+                </div>
+                <div class="project-categ">Web Design</div>
+                <div class="project-overlay"></div>
+              </div></a>
+              <a href="videography.html"><div class="project p-6">
+                <div class="project-title">
+                  <h1>Videography</h1>
+                </div>
+                <div class="project-categ">Branding</div>
+                <div class="project-overlay"></div>
+              </div></a>
+              <a href="graphic-design.html"><div class="project p-7">
+                <div class="project-title">
+                  <h1>Graphic Design</h1>
+                </div>
+                <div class="project-categ">Branding</div>
+                <div class="project-overlay"></div>
+              </div></a>
+              <a href="brand-development.html"><div class="project p-8">
+                <div class="project-title">
+                  <h1>Brand Development</h1>
+                </div>
+                <div class="project-categ">Branding</div>
+                <div class="project-overlay"></div>
+              </div></a>
+              <a href="about-me.html"><div class="project p-8">
+                <div class="project-title">
+                  <h1>About me</h1>
+                </div>
+                <div class="project-categ">Branding</div>
+                <div class="project-overlay"></div>
+              </div></a>
+            </div>
+          </div> -->
+
+          <!-- END HOVER-LIST CONTAINER-->
+
+<!-- NEW HOVE LIST-->
+
+<section class="hoverlist-wrapper">
+
+<div class="hover-list"></div>
+<div class="hover-wrapper">
+  <div class="hover-project-list">
+    <div class="hover-project p-1">
+      <div class="hover-project-title"><h1>Motionland</h1></div>
+      <div class="hover-project-categ">Branding</div>
+      <div class="hover-project-overlay"></div>
+    </div>
+    <div class="hover-project p-2">
+      <div class="hover-project-title"><h1>Focus Reactive</h1></div>
+      <div class="hover-project-categ">Photography</div>
+      <div class="hover-project-overlay"></div>
+    </div>
+    <div class="hover-project p-3">
+      <div class="hover-project-title"><h1>Aspect</h1></div>
+      <div class="hover-project-categ">Web Design</div>
+      <div class="hover-project-overlay"></div>
+    </div>
+    <div class="hover-project p-4">
+      <div class="hover-project-title"><h1>Logo Mark</h1></div>
+      <div class="hover-project-categ">Branding</div>
+      <div class="hover-project-overlay"></div>
+    </div>
+  </div>
+</div>
+
+</section>
+
+<!-- END NEW-->
+
+
+          <!-- END SHOWREEL CONTAINER-->
+
+          <!-- START HORIZONTAL SCROLL CONTAINER-->
+
+
+          <section id="portfolio" data-bgcolor="black">
+            <div class="container-fluid">
+              <div class="horiz-gallery-wrapper">
+                <div class="horiz-gallery-strip">
+
+
+                  <div class="project-wrap">
+
+
+                    <div class="w-layout-grid grid-5">
+                      <a href="sealskinz.html" class="subpage-link-clicker followerchangetest" data-follower-text="VIEW"></a>
+
+                      <h1 id="w-node-d72ff1e1-c6bc-e75d-1b05-a54b44288d64-8597ecd3" class="heading-20">SEALSKINZ</h1>
+                      <img
+                        src="https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/62d87fb4d09281003bf423bf_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44.jpg"
+                        loading="lazy" width="894" id="w-node-ee300000-69b6-47b4-16bd-c9e68c528786-8597ecd3"
+                        sizes="(max-width: 991px) 100vw, 894px"
+                        srcset="https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/62d87fb4d09281003bf423bf_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44-p-500.jpg 500w, https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/62d87fb4d09281003bf423bf_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44-p-800.jpg 800w, https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/62d87fb4d09281003bf423bf_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44-p-1080.jpg 1080w, https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/62d87fb4d09281003bf423bf_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44.jpg 1500w"
+                        alt="" class="image-11">
+                      <p id="w-node-_71fc457f-375c-e3b1-bae7-fe150333edea-8597ecd3" class="paragraph-2">Creative
+                        campaigns conducted as Global Content Manager of this well-known waterproof outdoor accessories
+                        brand</p>
+                      <div id="w-node-a2fed6dd-661f-36bf-46a1-e0219f0c18b2-8597ecd3" class="div-block-38">
+                        <div class="text-block-26">1</div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="project-wrap">
+                    <div class="w-layout-grid grid-5">
+                      <a href="gallery.html" class="subpage-link-clicker followerchangetest" data-follower-text="VIEW"></a>
+                      <h1 id="w-node-d72ff1e1-c6bc-e75d-1b05-a54b44288d64-8597ecd3" class="heading-20">BRITISH<br>CYCLING
+                      </h1><img
+                        src="https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/62d87fb4d09281003bf423bf_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44.jpg"
+                        loading="lazy" width="894" id="w-node-ee300000-69b6-47b4-16bd-c9e68c528786-8597ecd3"
+                        sizes="(max-width: 991px) 100vw, 894px"
+                        srcset="https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/62d87fb4d09281003bf423bf_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44-p-500.jpg 500w, https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/62d87fb4d09281003bf423bf_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44-p-800.jpg 800w, https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/62d87fb4d09281003bf423bf_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44-p-1080.jpg 1080w, https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/62d87fb4d09281003bf423bf_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44.jpg 1500w"
+                        alt="" class="image-11">
+                      <p id="w-node-_71fc457f-375c-e3b1-bae7-fe150333edea-8597ecd3" class="paragraph-2">Creative
+                        campaigns conducted as Global Content Manager of this well-known waterproof outdoor accessories
+                        brand</p>
+                      <div id="w-node-a2fed6dd-661f-36bf-46a1-e0219f0c18b2-8597ecd3" class="div-block-38">
+                        <div class="text-block-26">2</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="project-wrap">
+                    <div class="w-layout-grid grid-5">
+                      <a href="logotypes.html" class="subpage-link-clicker followerchangetest" data-follower-text="VIEW"></a>
+                      <h1 id="w-node-d72ff1e1-c6bc-e75d-1b05-a54b44288d64-8597ecd3" class="heading-20">ICAT</h1><img
+                        src="https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/62d87fb4d09281003bf423bf_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44.jpg"
+                        loading="lazy" width="894" id="w-node-ee300000-69b6-47b4-16bd-c9e68c528786-8597ecd3"
+                        sizes="(max-width: 991px) 100vw, 894px"
+                        srcset="https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/62d87fb4d09281003bf423bf_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44-p-500.jpg 500w, https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/62d87fb4d09281003bf423bf_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44-p-800.jpg 800w, https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/62d87fb4d09281003bf423bf_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44-p-1080.jpg 1080w, https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/62d87fb4d09281003bf423bf_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44.jpg 1500w"
+                        alt="" class="image-11">
+                      <p id="w-node-_71fc457f-375c-e3b1-bae7-fe150333edea-8597ecd3" class="paragraph-2">Creative
+                        campaigns conducted as Global Content Manager of this well-known waterproof outdoor accessories
+                        brand</p>
+                      <div id="w-node-a2fed6dd-661f-36bf-46a1-e0219f0c18b2-8597ecd3" class="div-block-38">
+                        <div class="text-block-26">3</div>
+                      </div>
+                    </div>
+
+                  </div>
+
+
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+
+          <!-- END HORIZONTAL SCROLL CONTAINER-->
+
+          <!-- START LOTTIE SECTION -->
+
+
+          <section class="LottieSection">
+            <div class="Lottie-block">
+              <div id="contours"></div>
+            </div>
+          </section>
+
+
+          <!-- END LOTTIE SECTION -->
+
+<!-- START MINI HORIZ. GALLERY SECTION -->
+
+
+
+
+
+<section class="section-gallery gallerymini">
+  <div class="rowmini"> 
+        <div class="gallery__image-container">
+      <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8bmF0dXJlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="gallery__image">
+    </div>
+        <div class="gallery__image-container">
+      <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8bmF0dXJlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="gallery__image">
+    </div>
+    <div class="gallery__image-container">
+      <img src="https://media.istockphoto.com/photos/hiker-relaxes-on-mountain-ridge-at-sunrise-picture-id1256434595?b=1&k=20&m=1256434595&s=170667a&w=0&h=5qQkV2X1o9_7Tk4lB_N5H9tVRWEGfLlV7zBE04wnO4Y=" alt="" class="gallery__image">
+    </div>
+    <div class="gallery__image-container">
+      <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8bmF0dXJlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="gallery__image">
+    </div>
+    <div class="gallery__image-container">
+      <img src="https://images.unsplash.com/photo-1586348943529-beaae6c28db9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fG5hdHVyZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="gallery__image">
+    </div>
+    <div class="gallery__image-container">
+      <img src="https://images.unsplash.com/photo-1439853949127-fa647821eba0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fG5hdHVyZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="gallery__image">
+    </div>
+  </div>
+  <div class="rowmini">
+      <div class="gallery__image-container">
+      <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8bmF0dXJlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="gallery__image">
+    </div>
+    <div class="gallery__image-container">
+      <img src="https://media.istockphoto.com/photos/hiker-relaxes-on-mountain-ridge-at-sunrise-picture-id1256434595?b=1&k=20&m=1256434595&s=170667a&w=0&h=5qQkV2X1o9_7Tk4lB_N5H9tVRWEGfLlV7zBE04wnO4Y=" alt="" class="gallery__image">
+    </div>
+          <div class="gallery__image-container">
+      <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8bmF0dXJlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="gallery__image">
+    </div>
+    <div class="gallery__image-container">
+      <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8bmF0dXJlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="gallery__image">
+    </div>
+      <div class="gallery__image-container">
+      <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8bmF0dXJlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="gallery__image">
+    </div>
+          <div class="gallery__image-container">
+      <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8bmF0dXJlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="gallery__image">
+    </div>
+    <div class="gallery__image-container">
+      <img src="https://images.unsplash.com/photo-1586348943529-beaae6c28db9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fG5hdHVyZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="gallery__image">
+    </div>
+    <div class="gallery__image-container">
+      <img src="https://images.unsplash.com/photo-1439853949127-fa647821eba0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fG5hdHVyZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="gallery__image">
+    </div>
+  </div>
+  <div class="rowmini">
+    <div class="gallery__image-container">
+      <img src="https://media.istockphoto.com/photos/hiker-relaxes-on-mountain-ridge-at-sunrise-picture-id1256434595?b=1&k=20&m=1256434595&s=170667a&w=0&h=5qQkV2X1o9_7Tk4lB_N5H9tVRWEGfLlV7zBE04wnO4Y=" alt="" class="gallery__image">
+    </div> 
+    <div class="gallery__image-container">
+      <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8bmF0dXJlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="gallery__image">
+    </div>
+    <div class="gallery__image-container">
+      <img src="https://images.unsplash.com/photo-1586348943529-beaae6c28db9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fG5hdHVyZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="gallery__image">
+    </div>
+    <div class="gallery__image-container">
+      <img src="https://images.unsplash.com/photo-1439853949127-fa647821eba0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fG5hdHVyZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="gallery__image">
+    </div>
+  </div>
+</section>
+
+<div class="padding"></div>
+
+<!-- END MINI HORIZ. GALLERY SECTION -->
+
+<!-- START APPROACH SECTION -->
+
+<div class="approach-spacer1 cursor-color"></div>
+<div class="outer-container demo-1 cursor-color">
+  <div class="approach-grid">
+    <div class="column-block1">
+      <div class="inner-content-block">
+        <figure class="content__item">
+          <h2 class="content__item-title oh"><span class="oh__inner">Curiosity</span></h2>
+          <div class="content__item-img-wrap">
+            <div class="content__item-img" style="background-image: url(img/curiosity.jpg)"></div>
+          </div>
+          <figcaption class="content__item-caption">
+            You could be my unintended
+            Choice to live my life extended
+            You could be the one I'll always love
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="column-block2">
+      <div class="inner-content-block">
+        <figure class="content__item">
+          <h2 class="content__item-title oh"><span class="oh__inner">Simplicity</span></h2>
+          <div class="content__item-img-wrap">
+            <div class="content__item-img" style="background-image: url(img/simplicity.jpg)"></div>
+          </div>
+          <figcaption class="content__item-caption">
+            You could be the one who listens
+            To my deepest inquisitions
+            You could be the one I'll always love
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="column-block3">
+      <div class="inner-content-block">
+        <figure class="content__item">
+          <h2 class="content__item-title oh"><span class="oh__inner">Growth</span></h2>
+          <div class="content__item-img-wrap">
+            <div class="content__item-img" style="background-image: url(img/growth1a.jpg)"></div>
+          </div>
+          <figcaption class="content__item-caption">
+            I'll be there as soon as I can
+            But I'm busy mending broken
+            Pieces of the life I had before
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="approach-spacer2"></div>
+<div class="approach-spacer3"></div>
+
+<!-- END APPROACH SECTION -->
+
+
+          <!-- THREE.JS SECTION -->
+ 
+
+          <!-- <div class="buffer"></div> -->
+          <div class="three-js-section" id="three-section"></div>
+            <div class="buffer"></div>
+            
+            
+            
+
+          <!-- END THREE.JS SECTION-->
+
+
+          <!-- START CIRCLE GROW -->
+
+          <div class="container-circle">
+            <div class="circlebox">
+              <svg class="svg-circle" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" width="800" height="800">
+                <defs>
+                  <path id="somePath" fill="none" stroke="black" d="M200,50c82.8,0,150,67.2,150,150s-67.2,150-150,150S50,282.8,50,200
+S117.2,50,200,50z" />
+                  <clipPath id="theClipPath">
+                    <circle class="masker" r="0" fill="purple" cx="200" cy="200" />
+                  </clipPath>
+                </defs>
+                <g id="circleClipPathReveal" clip-path="url(#theClipPath)">
+                  <circle r="2000" fill="#42a6e0" cx="200" cy="200" />
+                  <image class="wheel" xlink:href="https://assets.codepen.io/4086427/Site+text+wheel.svg" x="50" y="50"
+                    width="300" height="300" style: opacity=1 />
+
+                </g>
+
+              </svg>
+
+            </div> <!-- end of #CIRCLEBOX - 1st (top) div housing the wheel --->
+            <div class="spacer1">
+              Spacer 2</div>
+            <div class="contact">
+              <div class="contact-container">
+                <div class="left-col">
+                </div>
+                <div class="right-col">
+                  <div class="theme-switch-wrapper">
+                    </label>
+
+                  </div>
+
+                  <h1>Contact us</h1>
+                  <p>Planning to visit Indonesia soon? Get insider tips on where to go, things to do and find best deals
+                    for your next adventure.</p>
+
+                  <form id="cf" type="post">
+                    <label id="nameline" for="name"></label>
+
+                    <div class: "line-add2"><input type="text" id="name" name="name" placeholder="Your Full Name"><span
+                        id="underline1"></span></div>
+
+                    <label for="email"></label>
+                    <div class: "line-add2"><input type="email" id="email" name="email"
+                        placeholder="Your Email Address"><span id="underline2"></span></div>
+                    <label for="message"></label>
+                    <div class: "line-add2"><textarea rows="6" placeholder="Your Message" id="message"
+                        name="message"></textarea><span id="underline3"></span></div>
+                    <!--<a href="javascript:void(0)">--><button class="btn" type="submit" id="dont-name-submit"
+                      value="Send" name="submit">Send</button>
+                    <!--</a>-->
+
+                  </form>
+                  <div id="error"></div>
+                  <div id="success-msg"></div>
+                </div>
+              </div>
+            </div>
+          </div><!-- END CONTAINER-CIRCLE DIV -->
+
+          <div class="spacer2" style="color: white">FINAL BLOCK</div>
+
+          <!-- END CIRCLE GROW -->
+          
+          <footer class="footer">
+            <div class="footer-container">
+              <div class="footer-content">
+                <div class="l-footer">
+                  <div class="flex-container">
+        
+
+                    <lottie-player id="sticker" src="https://lottie.host/05104a62-8f43-47f9-bf00-65cc5542e864/aJfqgRbYkj.json"
+                      background="transparent" style="width: 200px; height: 200px;"></lottie-player>
+                  </div>
+                  <!--
+                  <h1>
+                    <img id="logo"
+                      src="https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/61d44096e7dd66115da6d1ce_WEBSITE%20LOGO%20Matt%20Rudd%20Creative%20LOGO%20MASTER%20white.svg"
+                      alt="">
+                      -->
+                  </h1>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam atque recusandae in sit sunt
+                    molestiae aliquid fugit. Mollitia eaque tempore iure sit nobis? Vitae nemo, optio maiores numquam
+                    quis recusandae.</p>
+                </div>
+                <ul class="r-footer">
+                  <div class="list1">
+                    <li>
+                      <h2>
+                        Social</h2>
+
+                      <ul class="box">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                        <li><a href="#">Dribbble</a></li>
+                      </ul>
+                    </li>
+                  </div>
+                  <div class="list2">
+                    <li>
+                      <h2>
+                        Info</h2>
+                      <ul class="box">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Sales</a></li>
+                        <li><a href="#">Tickets</a></li>
+                      </ul>
+                    </li>
+                  </div>
+
+                  <div class="list3">
+                    <li>
+                      <h2>
+                        Legal</h2>
+                      <ul class="box">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Contract</a></li>
+                      </ul>
+                    </li>
+                  </div>
+                </ul>
+                <div class="b-footer">
+                  <p>
+                    All rights reserved by Matt Rudd Creative 2022 </p>
+                </div>
+
+
+              </div>
+            </div>
+
+          </footer>
+
+        </main>
+      </div>
+      <!--smooth-content end -->
+      <div class="follower cursor" id="cursor">
+        <div class="follower__inner dot"></div>
+        <span class="follower__content"></span>
+    </div>  
+
+    </div>
+    <!--smooth-wrapper end -->
+
+    <div class="content__overlay">
+      <div class="overlay__inner"></div>
+    </div>
+
+    <div class="preview">
+      <div class="preview__item">
+        <div class="preview__item-img-outer">
+          <div class="preview__item-img-wrap">
+            <div class="preview__item-img" style="background-image: url(img/curiosity.jpg)"></div>
+          </div>
+        </div>
+        <h2 class="preview__item-title oh"><span class="oh__inner">Curiosity</span></h2>
+        <h3 class="preview__item-subtitle oh"><span class="oh__inner">Look beyond the obvious</span></h3>
+        <span class="preview__item-meta oh"><span class="oh__inner">2023</span></span>
+        <div class="preview__item-box preview__item-box--left">
+          <h3 class="preview__item-box-title oh"><span class="oh__inner">Setting</span></h3>
+          <p class="preview__item-box-desc">At the violet hour, when the eyes and back turn upward from the desk, when the human engine waits.</p>
+        </div>
+        <div class="preview__item-box preview__item-box--right">
+          <h3 class="preview__item-box-title oh"><span class="oh__inner">Location</span></h3>
+          <p class="preview__item-box-desc">April is the cruellest month, breeding lilacs out of the dead land, mixing memory and desire, stirring dull roots with spring rain.</p>
+        </div>
+      </div>
+      <div class="preview__item">
+        <div class="preview__item-img-outer">
+          <div class="preview__item-img-wrap">
+            <div class="preview__item-img" style="background-image: url(img/simplicity.jpg)"></div>
+          </div>
+        </div>
+        <h2 class="preview__item-title oh"><span class="oh__inner">Simplicity</span></h2>
+        <h3 class="preview__item-subtitle oh"><span class="oh__inner">Keep it simple, stupid (KISS)</span></h3>
+        <span class="preview__item-meta oh"><span class="oh__inner">2023</span></span>
+        <div class="preview__item-box preview__item-box--left">
+          <h3 class="preview__item-box-title oh"><span class="oh__inner">Setting</span></h3>
+          <p class="preview__item-box-desc">Madame sosostris, famous clairvoyante, had a bad cold, nevertheless is known to be the wisest woman in europe.</p>
+        </div>
+        <div class="preview__item-box preview__item-box--right">
+          <h3 class="preview__item-box-title oh"><span class="oh__inner">Location</span></h3>
+          <p class="preview__item-box-desc">Winter kept us warm, covering earth in forgetful snow, feeding a little life with dried tubers.</p>
+        </div>
+      </div>
+      <div class="preview__item">
+        <div class="preview__item-img-outer">
+          <div class="preview__item-img-wrap">
+            <div class="preview__item-img" style="background-image: url(img/growth1b.jpg)"></div>
+          </div>
+        </div>
+        <h2 class="preview__item-title oh"><span class="oh__inner">Growth</span></h2>
+        <h3 class="preview__item-subtitle oh"><span class="oh__inner">Nocturne</span></h3>
+        <span class="preview__item-meta oh"><span class="oh__inner">2023</span></span>
+        <div class="preview__item-box preview__item-box--left">
+          <h3 class="preview__item-box-title oh"><span class="oh__inner">Setting</span></h3>
+          <p class="preview__item-box-desc">The chair she sat in, like a burnished throne, glowed on the marble, where the glass.</p>
+        </div>
+        <div class="preview__item-box preview__item-box--right">
+          <h3 class="preview__item-box-title oh"><span class="oh__inner">Location</span></h3>
+          <p class="preview__item-box-desc">Doubled the flames of sevenbranched candelabra reflecting light upon the table as the glitter of her jewels rose to meet it.</p>
+        </div>
+      </div>
+      <!-- <div class="preview__item">
+        <div class="preview__item-img-outer">
+          <div class="preview__item-img-wrap">
+            <div class="preview__item-img" style="background-image: url(img/4.avif)"></div>
+          </div>
+        </div>
+        <h2 class="preview__item-title oh"><span class="oh__inner">Lily</span></h2>
+        <h3 class="preview__item-subtitle oh"><span class="oh__inner">Outsider</span></h3>
+        <span class="preview__item-meta oh"><span class="oh__inner">2021</span></span>
+        <div class="preview__item-box preview__item-box--left">
+          <h3 class="preview__item-box-title oh"><span class="oh__inner">Setting</span></h3>
+          <p class="preview__item-box-desc">From satin cases poured in rich profusion; in vials of ivory and coloured glass.</p>
+        </div>
+        <div class="preview__item-box preview__item-box--right">
+          <h3 class="preview__item-box-title oh"><span class="oh__inner">Location</span></h3>
+          <p class="preview__item-box-desc">Huge sea-wood fed with copper burned green and orange, framed by the coloured stone, in which sad light a carvéd dolphin swam.</p>
+        </div>
+      </div> -->
+      <button class="unbutton2 preview__back" aria-label="Back to content">
+        <svg width="200px" height="36px" viewBox="0 0 50 9">
+          <path vector-effect="non-scaling-stroke" d="m0 4.5 5-3m-5 3 5 3m45-3h-77"></path>
+        </svg>
+      </button>
+    </div>
+
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/ScrollSmoother.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/SplitText.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/Flip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/blotter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/channelSplitMaterial.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/Observer.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/DrawSVGPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.2/plyr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/CustomEase.min.js"></script>
+    <script type="module" src="js/main.js" defer></script>
+    <!-- <script type="module" data-main="js/main.js" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" defer></script> -->
+ 
+    
+</body>
+
+</html>

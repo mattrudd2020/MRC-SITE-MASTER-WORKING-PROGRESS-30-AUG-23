@@ -1,0 +1,155 @@
+<html class="no-js is-home" lang="">
+
+<head>
+  <meta charset="utf-8" />
+  <title>How to create page transitions tutorial - Barba.js</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link href="css/style.css" rel="stylesheet">
+<!-- <link href="css/transition.css" rel="stylesheet"> -->
+
+</head>
+
+<body data-barba="wrapper">
+
+
+
+
+
+  <!-- ELEMENT ON LOAD - WORK OUT BARBA!  
+
+<nav class="overlay-nav" style="opacity: 0; visibility: hidden;">
+  <svg class="overlay-nav_bg" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <path class="overlay-nav_path" vector-effect="non-scaling-stroke" d="M 0 0 V 0 Q 50 0 100 0 V 0 z"></path>
+</svg>
+</nav> -->
+
+  <div class="transition clip"></div>
+
+  <svg id="loadersvg" viewBox="0 0 1 1" preserveAspectRatio="none">
+    <clipPath id="clippath" clipPathUnits="objectBoundingBox">
+      <path class="swipeup" d="M 0 1 V 1 Q 0.5 1 1 1 V 1 z" />
+    </clipPath>
+  </svg>
+
+  <div class="lightbox" id="lightbox-close">
+    <div class="lightbox__top lightbox-bar"></div>
+    <div class="lightbox__content">
+      <video id="video" width="100%" height="100%" controls playsinline>
+        <source
+          src="https://media-files.vidstack.io/360p.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+    <div class="lightbox__bottom lightbox-bar"></div>
+  </div>
+
+  <div id="smooth-wrapper">
+
+
+    <div id="smooth-content">
+      <main data-barba="container" data-barba-namespace="logofolio">
+      
+        <div class="lottie-logo-section-container">
+          <div class="logo-app">
+         
+            <div class="logo-sub-titles">
+              <div class="logo-sub">2020/2022</div>
+              <div class="logo-sub">CLICK EACH LOGO TO OPEN AND CLOSE</div>
+              <div class="logo-sub">VECTORS</div>
+            </div>
+            <div class="logo-title">LOGOFOLIO</div>
+
+          
+              <div class="logo-originalContainer">
+                <div class="logo-colour-bg"></div>
+                <div class="logo-lottie-item">
+                <lottie-player class="logo-lottieHolder" id="logo-lottie-holder1" src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/lottie/AB+logo+master.json" background="transparent" speed="1"></lottie-player>
+              </div>
+        
+              <div class="logo-lottie-item">
+                <lottie-player class="logo-lottieHolder" id="logo-lottie-holder2" src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/lottie/Green+Room+Logo.json" background="transparent" speed="1"></lottie-player>
+              </div>
+                <div class="logo-lottie-item">
+                <lottie-player class="logo-lottieHolder" id="logo-lottie-holder3" src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/lottie/AB-VAULT.json" background="transparent" speed="1"></lottie-player>
+              </div>
+                <div class="logo-lottie-item">
+                <lottie-player class="logo-lottieHolder" id="logo-lottie-holder4" src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/lottie/Audition-Key-Master.json" background="transparent" speed="1"></lottie-player>
+              </div>
+                <div class="logo-lottie-item">
+                <lottie-player class="logo-lottieHolder" id="logo-lottie-holder5" src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/lottie/Careeer-accelerator.json" background="transparent" speed="1"></lottie-player>
+              </div>
+                <div class="logo-lottie-item">
+                <lottie-player class="logo-lottieHolder" id="logo-lottie-holder6" src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/lottie/DAC.json" background="transparent" speed="1"></lottie-player>
+              </div>
+                <div class="logo-lottie-item">
+                <lottie-player class="logo-lottieHolder" id="logo-lottie-holder7" src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/lottie/ICAT+Studio+Online-FINAL!.json" background="transparent" speed="1"></lottie-player>
+              </div>
+                <div class="logo-lottie-item">
+                <lottie-player class="logo-lottieHolder" id="logo-lottie-holder8" src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/lottie/Own+Sh+Boot2.json" background="transparent" speed="1"></lottie-player>
+              </div>
+                <div class="logo-lottie-item">
+                <lottie-player class="logo-lottieHolder" id="logo-lottie-holder9" src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/lottie/T-Own.json" background="transparent" speed="1"></lottie-player>
+              </div>
+                <div class="logo-lottie-item">
+                <lottie-player class="logo-lottieHolder" id="logo-lottie-holder10" src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/lottie/Pro-Act-3.json" background="transparent" speed="1"></lottie-player>
+              </div>
+                <div class="logo-lottie-item">
+                <lottie-player class="logo-lottieHolder" id="logo-lottie-holder11" src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/lottie/LABAN.json" background="transparent" speed="1"></lottie-player>
+              </div>
+                <div class="logo-lottie-item">
+                <lottie-player class="logo-lottieHolder" id="logo-lottie-holder12" src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/lottie/Shakespeare+Head.json" background="transparent" speed="1"></lottie-player>
+              </div>
+              </div>
+              <button class="unbutton2 logo-button followerchangetest" data-follower-text="BACK" aria-label="Back to content">
+                <a href="index.html"><svg width="200px" height="36px" viewBox="0 0 50 9">
+                  <path vector-effect="non-scaling-stroke" d="m0 4.5 5-3m-5 3 5 3m45-3h-77"></path>
+                </svg></a>
+              </button>
+          </div>
+      
+
+            </div>
+
+  
+        </main>
+      </div>
+      <!--smooth-content end -->
+
+     </div> 
+    <!--smooth-wrapper end -->
+
+    <div class="follower cursor" id="cursor">
+      <div class="follower__inner dot"></div>
+      <span class="follower__content"></span>
+  </div>  
+
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/ScrollSmoother.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/SplitText.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/Flip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/blotter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/channelSplitMaterial.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/Observer.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/DrawSVGPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.2/plyr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/CustomEase.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/MorphSVGPlugin.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/TextPlugin.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/ScrollToPlugin.min.js"></script>
+    <script type="module" src="js/main-css-promise.js" defer></script>
+    <!-- <script type="module" data-main="js/main.js" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" defer></script> -->
+ 
+</body>
+
+    </html>
+  

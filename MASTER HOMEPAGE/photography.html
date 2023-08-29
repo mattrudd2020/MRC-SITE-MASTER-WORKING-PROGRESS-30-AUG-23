@@ -1,0 +1,191 @@
+<html class="no-js is-home" lang="">
+
+<head>
+  <meta charset="utf-8" />
+  <title>How to create page transitions tutorial - Barba.js</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link href="css/style.css" rel="stylesheet">
+<link href="css/transition.css" rel="stylesheet">
+
+</head>
+
+<body data-barba="wrapper">
+<button class="cursors main-cursor"></button>
+<button class="cursors video-cursor"><span class="cursor-text-play">PLAY</span></button>
+<!--<button class="cursor-video-exit"><span class="cursor-text-exit">EXIT</span></button>-->
+<button class="cursor-video-exit">EXIT</button>
+<button class="cursor-read-more">READ MORE</button>
+
+
+
+
+  <!-- ELEMENT ON LOAD - WORK OUT BARBA!  
+
+<nav class="overlay-nav" style="opacity: 0; visibility: hidden;">
+  <svg class="overlay-nav_bg" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <path class="overlay-nav_path" vector-effect="non-scaling-stroke" d="M 0 0 V 0 Q 50 0 100 0 V 0 z"></path>
+</svg>
+</nav> -->
+
+  <div class="transition clip"></div>
+
+  <svg id="loadersvg" viewBox="0 0 1 1" preserveAspectRatio="none">
+    <clipPath id="clippath" clipPathUnits="objectBoundingBox">
+      <path class="swipeup" d="M 0 1 V 1 Q 0.5 1 1 1 V 1 z" />
+    </clipPath>
+  </svg>
+
+  <div class="lightbox" id="lightbox-close">
+    <div class="lightbox__top lightbox-bar"></div>
+    <div class="lightbox__content">
+      <video id="video" width="100%" height="100%" controls playsinline>
+        <source
+          src="https://media-files.vidstack.io/360p.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+    <div class="lightbox__bottom lightbox-bar"></div>
+  </div>
+
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      <main data-barba="container" data-barba-namespace="gallery">
+          <div class="frame">
+              <div class="frame__title"> <a class="frame__title-prev"></a>
+                  <h1 class="frame__title-main" data-no-cursor-info>BACK TO THE INDEX</h1> <a aria-label="Back to the article"
+                      class="frame__title-back" data-no-cursor-info href="index.html"><span>&rarr;</span></a>
+              </div>
+              <nav class="frame__nav blocked"> <button class="frame__nav-button unbutton blocked">Stronger</button> <button
+                      class="frame__nav-button unbutton" data-no-cursor-info>No choice</button> <button
+                      class="frame__nav-button unbutton" data-no-cursor-info>Owned no longer</button> <button
+                      class="frame__nav-button unbutton" data-no-cursor-info>Assert control</button> <button
+                      class="frame__nav-button unbutton" data-no-cursor-info>Cold &amp; detached</button><button
+                      class="frame__nav-button unbutton">Cold2</button></nav> 
+                      <div class="go_back-wrapper">
+                      <button
+                  class="frame__back unbutton" id="resetCursor"> <span class="go_back-move blocked">&larr; Go back</span> </button> 
+                </div>
+                  <span
+                  class="frame__info">&darr; Scroll or drag &darr;</span>
+          </div>
+          <div class="slides">
+            <div class="slides">
+                <div class="slide followerchangetest" data-follower-text="INFO" data-run-code="true">
+                    <div class="slide__inner"> <!-- want the cursor text to be empty and the cursor to be #f4f4f4 if this -->
+                        <div class="slide__img">
+                            <div class="slide__img-inner" style="background-image:url(img/fullscreen-galllery/MTB-JS-splash-tyre.jpg)"></div>
+                        </div>
+                        <div class="slide__content">
+                            <div class="slide__content-img" style="background-image:url(img/fullscreen-galllery/MTB-JS-splash-tyre.jpg)"></div>
+                            <h2>Stronger</h2>
+                            <p>You strung me along, I thought I was strong, but now you have pushed me under. I’ve opened my
+                                eyes, and counted the lies, now it is clearer to me. You are just a user, and an abuser, and
+                                I refuse to take it.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide followerchangetest" data-follower-text="INFO" id="slide">
+                    <div class="slide__inner">
+                        <div class="slide__content">
+                            <div class="slide__content-img" style="background-image:url(img/fullscreen-galllery/MTB-JS-slope.jpg)"></div>
+                            <h2>No choice</h2>
+                            <p>Fall into line, you will do as you’re told. No choice fatigue, your blood is running cold. We
+                                lose control, the world will fall apart.</p>
+                        </div>
+                        <div class="slide__img">
+                            <div class="slide__img-inner" style="background-image:url(img/fullscreen-galllery/MTB-JS-slope.jpg)"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide followerchangetest" data-follower-text="INFO" id="slide">
+                    <div class="slide__inner">
+                        <div class="slide__content">
+                            <div class="slide__content-img" style="background-image:url(img/fullscreen-galllery/medals.jpg)"></div>
+                            <h2>Assert control</h2>
+                            <p>Cornered, I’m exhausted with fear. Our love and compassion dissolved. And demons, have
+                                materialised in me. Can’t fight them, they’re taking control.</p>
+                        </div>
+                        <div class="slide__img">
+                            <div class="slide__img-inner" style="background-image:url(img/fullscreen-galllery/medals.jpg)"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide followerchangetest" data-cursor data-follower-text="INFO" id="slide">
+                    <div class="slide__inner">
+                        <div class="slide__content">
+                            <div class="slide__content-img" style="background-image:url(img/fullscreen-galllery/hoy-2.jpg)"></div>
+                            <h2>Cold &amp; detached</h2>
+                            <p>Fate has brought us here to face. Our hopes and dreams erased. Either kill or be killed.</p>
+                        </div>
+                        <div class="slide__img">
+                            <div class="slide__img-inner" style="background-image:url(img/fullscreen-galllery/hoy-2.jpg)"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide followerchangetest" data-follower-text="INFO" id="slide">
+                  <div class="slide__inner">
+                      <div class="slide__content">
+                          <div class="slide__content-img" style="background-image:url(img/fullscreen-galllery/Road-race-MS-c-up.jpg)"></div>
+                          <h2>Cold2 &amp; detached</h2>
+                          <p>Fate has brought us here to face. Our hopes and dreams erased. Either kill or be killed.</p>
+                      </div>
+                      <div class="slide__img">
+                          <div class="slide__img-inner" style="background-image:url(img/fullscreen-galllery/Road-race-MS-c-up.jpg)"></div>
+                      </div>
+                  </div>
+              </div>
+              <div class="slide followerchangetest" data-follower-text="INFO" id="slide">
+                  <div class="slide__inner">
+                      <div class="slide__content">
+                          <div class="slide__content-img" style="background-image:url(img/fullscreen-galllery/Urban-cyclists.jpg)"></div>
+                          <h2>Cold3 &amp; detached</h2>
+                          <p>Fate has brought us here to face. Our hopes and dreams erased. Either kill or be killed.</p>
+                      </div>
+                      <div class="slide__img">
+                          <div class="slide__img-inner" style="background-image:url(img/fullscreen-galllery/Urban-cyclists.jpg)"></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="cursor"> <span class="cursor__text" data-splitting="">+ Discover more</span> </div>
+      </main>
+
+    </div>
+    <!--smooth-content end -->
+    </div>
+    <!--smooth-wrapper end -->
+  
+    <div class="follower cursor" id="cursor">
+        <div class="follower__inner dot"></div>
+        <span class="follower__content"></span>
+    </div>  
+
+
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/ScrollSmoother.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/SplitText.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/Flip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/blotter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/channelSplitMaterial.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/Observer.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/DrawSVGPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.2/plyr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/CustomEase.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/MorphSVGPlugin.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/TextPlugin.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/ScrollToPlugin.min.js"></script>
+    <script type="module" src="js/main-css-promise.js" defer></script>
+    
+    
+    </body>
+    </html>

@@ -1,0 +1,299 @@
+<html class="no-js is-home" lang="">
+
+<head>
+  <meta charset="utf-8" />
+  <title>How to create page transitions tutorial - Barba.js</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link href="css/style.css" rel="stylesheet">
+<link href="css/transition.css" rel="stylesheet">
+
+</head>
+
+<body data-barba="wrapper">
+
+
+  <!-- ELEMENT ON LOAD - WORK OUT BARBA!  
+
+<nav class="overlay-nav" style="opacity: 0; visibility: hidden;">
+  <svg class="overlay-nav_bg" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <path class="overlay-nav_path" vector-effect="non-scaling-stroke" d="M 0 0 V 0 Q 50 0 100 0 V 0 z"></path>
+</svg>
+</nav> -->
+
+  <div class="transition clip"></div>
+
+  <svg id="loadersvg" viewBox="0 0 1 1" preserveAspectRatio="none">
+    <clipPath id="clippath" clipPathUnits="objectBoundingBox">
+      <path class="swipeup" d="M 0 1 V 1 Q 0.5 1 1 1 V 1 z" />
+    </clipPath>
+  </svg>
+
+  <div class="lightbox" id="lightbox-close">
+    <div class="lightbox__top lightbox-bar"></div>
+    <div class="lightbox__content">
+      <video id="video" width="100%" height="100%" controls playsinline>
+        <source
+          src="https://media-files.vidstack.io/360p.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+    <div class="lightbox__bottom lightbox-bar"></div>
+  </div>
+
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      <main data-barba="container" data-barba-namespace="videography">
+
+        <div class="videog-top-section">
+          <div class="videog-title">VIDEOGRAPHY</div>
+      </div>
+
+      <section class="icat-blurb split-text_blurb">
+        <div class="icat-spacer-blurb blurb-wrap videog-blurb">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in porta tellus. Cras
+          vel placerat urna, in semper justo. Sed malesuada sit amet felis eget mattis. Etiam lectus massa, suscipit
+          vitae malesuada a butlia consequat sed turpis. Donec nec ante tristique, ullamcorper odio quis a I, fringilla
+          nibh.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in porta tellus. Cras vel placerat
+          urna, in semper justo. Sed malesuada sit amet felis eget mattis. Etiam lectus massa, suscipit vitae malesuada
+          a, consequat sed turpis. Donec nec ante tristique, ullamcorper odio quis, fringilla nibh.</p>
+        </div>
+      </section>
+  
+      <div class="section-28">
+          <div class="w-layout-grid grid-9">
+            <div class="videog-left-side-column">
+              <div class="sealskinz-america-title">SEALSKINZ AMERICA</div>
+              <div class="text-block-33">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in porta tellus. Cras
+                vel placerat urna, in semper justo. Sed malesuada sit amet felis eget mattis. Etiam lectus massa, suscipit
+                vitae malesuada a butlia consequat sed turpis. Donec nec ante tristique, ullamcorper odio quis a I, fringilla
+                nibh. <br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in porta tellus. Cras vel placerat
+                urna, in semper justo. Sed malesuada sit amet felis eget mattis. Etiam lectus massa, suscipit vitae malesuada
+                a, consequat sed turpis. Donec nec ante tristique, ullamcorper odio quis, fringilla nibh.</div>
+              <div class="videog-subtitle">CHARACTER PROFILE</div>
+              <div class="w-layout-grid grid-11">
+                <div id="w-node-_43be4ff2-63e6-30f9-7863-5a58f2d6b818-e7525bc2" class="div-block-63"></div>
+                <div id="w-node-_650e65a3-b8c6-37c2-9c0d-f709ebdb3673-e7525bc2" class="name-block-col2">
+                  <div id="w-node-dcab804b-63d5-435c-342b-6ee907001ccd-e7525bc2" class="name-title-text">NAME</div>
+                  <div class="name-details-text">Joanna Shimwell<br>Outdoors Influencer</div>
+                </div>
+                <div id="w-node-_22672777-1031-7f31-edba-38c9f377e6bf-e7525bc2" class="disc-block-col2">
+                  <div class="name-title-text">DISCIPLINES</div>
+                  <div class="name-details-text">MTB<br>Outdoor Swim<br>SUP</div>
+                </div>
+                <div id="w-node-_537b1569-ea32-74a1-b9e8-7b1265d2aac1-e7525bc2" class="div-block-64">
+                  <div class="name-title-text">INFO</div>
+                  <div class="name-details-text">Joanna was fantastic to work with.<br><br>She fit the brief of an inspiring
+                    female MTBer, able to tell the story of developing a high level of confidence and skill out on the trails.
+                  </div>
+                </div>
+              </div>
+              <div class="videog-subtitle">LOCATION</div>
+              <div class="map-lottie">
+                      <section class="videog-lottie-section">
+                        <div class="videog-lottie-block">
+                          <div id="videog-map"></div>
+                        </div>
+                        </section>
+              </div>
+              <div class="videog-subtitle">PRODUCTION</div>
+              <div class="grid-12">
+                <div class="prod-block-col1">
+                  <div class="name-title-text">FILMING</div>
+                  <div class="name-details-text">Duct Tape Then Beer</div>
+                </div>
+                <div class="prod-block-col2">
+                  <div class="name-title-text">
+                    EDITING/GRADING</div>
+                  <div class="name-details-text">Matt Rudd</div>
+                </div>
+              </div>
+            </div>
+            <div class="videog-right-side-column"><img
+                src="https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/6270c537971e10824d12dc49_MTB%20Master%20images%20-%20Selects%20Tier%201-4.jpg"
+                loading="lazy"
+                srcset="https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/6270c537971e10824d12dc49_MTB%20Master%20images%20-%20Selects%20Tier%201-4-p-500.jpeg 500w, https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/6270c537971e10824d12dc49_MTB%20Master%20images%20-%20Selects%20Tier%201-4-p-800.jpeg 800w, https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/6270c537971e10824d12dc49_MTB%20Master%20images%20-%20Selects%20Tier%201-4-p-1080.jpeg 1080w, https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/6270c537971e10824d12dc49_MTB%20Master%20images%20-%20Selects%20Tier%201-4-p-1600.jpeg 1600w, https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/6270c537971e10824d12dc49_MTB%20Master%20images%20-%20Selects%20Tier%201-4-p-2000.jpeg 2000w, https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/6270c537971e10824d12dc49_MTB%20Master%20images%20-%20Selects%20Tier%201-4.jpg 2400w"
+                height="100" sizes="(max-width: 1919px) 100vw, 12vw" alt="" class="image-12"></div>
+          </div>
+    </div>
+        <div class="videography-spacer">
+  </div>
+  
+  <!-- <div class="section-32 wf-section">
+          <div class="w-layout-grid grid-13">
+            <div id="w-node-_38f58255-d289-dbd6-de64-49008d8e261f-e7525bc2" class="text-block-35-storyboard">STORYBOARDING
+            </div>
+            <div id="w-node-_513a42ca-1d8b-899a-a3c9-fe16a7485a20-e7525bc2" class="thumbnail-container">
+  START HORIZONTAL SCROLL CONTAINER -->
+  
+  <div class="videog-storyboard-section" data-bgcolor="#f4f4f4">
+    <div class="videog-container-fluid">
+      <div id="w-node-_38f58255-d289-dbd6-de64-49008d8e261f-e7525bc2" class="videog-storyboard">STORYBOARDING
+      </div>
+      <div class="videog-horiz-gallery-wrapper">
+        <div class="videog-horiz-gallery-strip">
+  
+            <div class="thumbnail">
+            <img class="thumbnail-img"
+                src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/videography-images/1America-storyboard-svgArtboard+2-80.jpg"
+                loading="lazy"alt="">
+            </div>
+  
+  
+  
+            <div class="thumbnail">
+            <img class="thumbnail-img"
+                src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/videography-images/2America-storyboard-svgArtboard+2-80.jpg"
+                loading="lazy"alt="">
+            </div>
+  
+  
+            <div class="thumbnail">
+            <img class="thumbnail-img"
+                src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/videography-images/3America-storyboard-svgArtboard+2-80.jpg"
+                loading="lazy"alt="">
+            </div>
+  
+  
+  
+            <div class="thumbnail">
+              </h1><img class="thumbnail-img"
+                src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/videography-images/4America-storyboard-svgArtboard+2-80.jpg"
+                loading="lazy"alt="">
+            </div>
+  
+  
+   
+            <div class="thumbnail">
+            <img class="thumbnail-img"
+                src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/videography-images/5America-storyboard-svgArtboard+2-80.jpg"
+                loading="lazy"alt="">
+            </div>
+  
+  
+  
+            <div class="thumbnail">
+            <img class="thumbnail-img"
+                src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/videography-images/6America-storyboard-svgArtboard+2-80.jpg"
+                loading="lazy"alt="">
+            </div>
+  
+  
+   
+            <div class="thumbnail">
+              </h1><img class="thumbnail-img"
+                src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/videography-images/7America-storyboard-svgArtboard+2-80.jpg"
+                loading="lazy"alt="">
+            </div>
+  
+  
+            <div class="thumbnail">
+            <img class="thumbnail-img"
+                src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/videography-images/8America-storyboard-svgArtboard+2-80.jpg"
+                loading="lazy"alt="">
+            </div>
+   
+  
+  
+            <div class="thumbnail">
+            <img class="thumbnail-img"
+                src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/videography-images/9America-storyboard-svgArtboard+2-80.jpg"
+                loading="lazy"alt="">
+            </div>
+  
+  
+  
+            <div class="thumbnail">
+            <img class="thumbnail-img"
+                src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/videography-images/10America-storyboard-svgArtboard+2-80.jpg"
+                loading="lazy"alt="">
+            </div>
+  
+  
+  
+  
+  
+        </div>
+  
+  
+      </div>
+  
+      </div>
+      <div class="videog-storyboard-blurb">
+        <div class="info-title-text-storyboard">INFO</div>
+        <div class="info-details-text-storyboard">Creating storyboards to plot out the narrative of a video is always
+          time well spent, but here it was an essential practice. Due to schedules, I wasn’t able to fly out to Seattle
+          to direct the shoot in person with the crew of adventure film agency ‘Duct Tape then Beer’. I crafted these
+          shot sketches to give them as much clarity as possible about what I was looking to capture.</div>
+      </div>
+    </div>
+  
+  
+  
+    <!-- END HORIZONTAL SCROLL CONTAINER-->
+  
+    <div class="videog-metrics-block">
+      <div class="videog-metrics-grid">
+        <div class="videog-metrics-imageleft"></div>
+        <div class="videog-metrics-container">
+          <div class="videog-metric-title">METRICS</div>
+          <div class="videog-metric-1">
+            <div class="videog-metric-number-1">100</div>
+            <div class="videog-metric-caption1">PERCENT INCREASE IN ENGAGEMENT</div>
+          </div>
+          <div class="videog-metric-2">
+            <div class="videog-metric-number-2">76</div>
+            <div class="videog-metric-caption2">PERCENT INCREASE IN CLICK-THROUGHS</div>
+          </div>
+          <div class="videog-video-container">
+            <div class="video-container-text">CLICK&nbsp;TO&nbsp;WATCH&nbsp;VIDEO</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+        </main>
+    </div>
+    <!--smooth-content end -->
+    </div>
+    <!--smooth-wrapper end -->
+  
+    <div class="follower cursor" id="cursor">
+      <div class="follower__inner dot"></div>
+      <span class="follower__content"></span>
+  </div>  
+
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/ScrollSmoother.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/SplitText.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/Flip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/blotter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/channelSplitMaterial.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/Observer.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/DrawSVGPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.2/plyr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/CustomEase.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/MorphSVGPlugin.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/TextPlugin.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/ScrollToPlugin.min.js"></script>
+    <script type="module" src="js/main-css-promise.js" defer></script>
+    <!-- <script type="module" data-main="js/main.js" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" defer></script> -->
+ 
+    
+
+
+</body>
+
+    </html>
+  

@@ -1,0 +1,383 @@
+<html class="no-js is-home" lang="">
+
+<head>
+  <meta charset="utf-8" />
+  <title>How to create page transitions tutorial - Barba.js</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link href="css/style.css" rel="stylesheet">
+<link href="css/transition.css" rel="stylesheet">
+
+</head>
+
+<body data-barba="wrapper">
+
+  <!-- ELEMENT ON LOAD - WORK OUT BARBA!  
+
+<nav class="overlay-nav" style="opacity: 0; visibility: hidden;">
+  <svg class="overlay-nav_bg" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <path class="overlay-nav_path" vector-effect="non-scaling-stroke" d="M 0 0 V 0 Q 50 0 100 0 V 0 z"></path>
+</svg>
+</nav> -->
+
+  <div class="transition clip"></div>
+
+  <svg id="loadersvg" viewBox="0 0 1 1" preserveAspectRatio="none">
+    <clipPath id="clippath" clipPathUnits="objectBoundingBox">
+      <path class="swipeup" d="M 0 1 V 1 Q 0.5 1 1 1 V 1 z" />
+    </clipPath>
+  </svg>
+
+  <div class="lightbox" id="lightbox-close">
+    <div class="lightbox__top lightbox-bar"></div>
+    <div class="lightbox__content">
+      <video id="video" width="100%" height="100%" controls playsinline>
+        <source
+          src="https://media-files.vidstack.io/360p.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+    <div class="lightbox__bottom lightbox-bar"></div>
+  </div>
+
+  <div id="smooth-wrapper">
+
+
+    <div id="smooth-content">
+    
+
+    
+      <main data-barba="container" data-barba-namespace="creative-direction">
+    
+
+    
+        <div class="cd-title-section">
+          <div class="text-block-49">
+              CREATIVE
+              <br/>
+              DIRECTION
+          </div>
+      </div>
+    
+    
+      <div class="video-direction-section">
+    
+        <section class="cd-video-previews-section">
+
+          <div class="cd_vid_cont_container">
+            <div class="cd_vid-overlay-container">
+              <div class="cd_screen-fade"></div>
+              <video autoplay playsinline muted loop preload poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/oceanshot.jpg">
+                <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/ocean-small.webm" />
+                <source src="http://thenewcode.com/assets/videos/ocean-small.mp4" />
+              </video>
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 285 80" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                <mask id="mask" x="0" y="0" width="100%" height="100%" >
+                  <rect x="0" y="0" width="100%" height="100%" />
+                <text text-anchor="middle" alignment-baseline="central" x="50%"  y="20">VIDEO</text>
+                      <text text-anchor="middle" alignment-baseline="central" x="50%"  y="37.2">DIRECTION</text>
+                  </mask>
+              </defs>
+             <rect x="0" y="0" width="100%" height="100%" />
+              </svg>
+            </div>
+              
+            </div>
+
+          <div class="stories-container" style="">
+              
+          
+                        <ul class="stories" style="color: rgb(255, 255, 255);">
+                            <li>
+                              <a class="story-commitment" data-id="story-commitment">
+                                <span class="subtitle followerchangetest" data-cursor data-follower-text="PLAY">MOUNT RANIER (USA)</span>
+                               
+                              </a>
+                            </li>
+                            <li>
+                              <a class="story-determination"  data-id="story-determination">
+                                <span class="subtitle followerchangetest" data-follower-text="PLAY">NUREMBURG (GER)</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a class="story-honor"  data-id="story-honor">
+                                <span class="subtitle followerchangetest" data-follower-text="PLAY">PEAK DISTRICT (UK)</span>
+                              </a>
+                            </li>
+                           
+                        </ul>
+            
+              <div class="flipped_stories-container followerchangetest" data-follower-text="CLOSE">
+                      </div>
+          
+                        <div class="video-container">
+          <video data-id="story-commitment" class="rolloverVideo" loop="" muted="" playsinline="" autoplay="">
+                              <source src="https://player.vimeo.com/external/344700809.sd.mp4?s=03f44317b238802fa65f0cb857694e4651bb0be3&amp;profile_id=165" type="video/mp4">
+                            </video>
+                            <video data-id="story-determination" class="rolloverVideo" loop="" muted="" playsinline="" autoplay="">
+                              <source src="https://player.vimeo.com/external/345162331.sd.mp4?s=d0f7d3364ea3cb7763616517ad116fc7131882f5&amp;profile_id=165" type="video/mp4">
+                            </video>
+                            <video data-id="story-honor" class="rolloverVideo" loop="" muted="" playsinline="" autoplay="">
+                              <source src="https://player.vimeo.com/external/344700809.sd.mp4?s=03f44317b238802fa65f0cb857694e4651bb0be3&amp;profile_id=165" type="video/mp4">
+                            </video>
+                        </div>
+        
+            
+            
+            </section>
+      
+  </div>
+ 
+    
+   <div class="photoshoots-section-container"> 
+      <div class="photoshoots-section">
+        
+     <div class="cd-gallery-container">
+  <section class="cd-section-gallery cd-gallery">
+      <h1 class="cd_header__title">PHOTOSHOOTS</h1>
+    <div class="cd-row"> 
+          <div class="cd-gallery__image-container">
+        <img src="img/1.1.SealSkinz_LakeDistrict_March19_ByTomKahler_Highres (56 of 72).jpg" alt="" class="cd-gallery__image">
+      </div>
+          <div class="cd_gallery__image-container">
+        <img src="img/1.2.SealSkinz- Elliot Simpson- High Res-20.jpg" alt="" class="cd-gallery__image">
+      </div>
+      <div class="cd-gallery__image-container">
+        <img src="img/1.3.SealSkinz- Elliot Simpson- High Res-56.jpg" alt="" class="cd-gallery__image">
+      </div>
+      <div class="cd-gallery__image-container">
+        <img src="img/1.4.20190318-JackAnstey-DSC07406.jpg" alt="" class="cd-gallery__image">
+      </div>
+      <div class="cd-gallery__image-container">
+        <img src="img/1.5.20190318-JackAnstey-DSC07359.jpg" alt="" class="cd-gallery__image">
+      </div>
+      <div class="cd-gallery__image-container">
+        <img src="img/2.1..SealSkinz- Elliot Simpson- High Res-19.jpg" alt="" class="cd-gallery__image">
+      </div>
+    </div>
+    <div class="cd-row">
+        <div class="cd-gallery__image-container">
+        <img src="img/2.1..SealSkinz- Elliot Simpson- High Res-19.jpg" alt="" class="cd-gallery__image">
+      </div>
+      <div class="cd-gallery__image-container">
+        <img src="img/2.2.SealSkinz_LakeDistrict_March19_ByTomKahler_Highres (63 of 72).jpg" alt="" class="cd-gallery__image">
+      </div>
+            <div class="cd-gallery__image-container">
+        <img src="img/2.3.SealSkinz- Elliot Simpson- High Res-16.jpg" alt="" class="cd-gallery__image">
+      </div>
+      <div class="cd-gallery__image-container">
+        <img src="img/2.4.SealSkinz- Elliot Simpson- High Res-66.jpg" alt="" class="cd-gallery__image">
+      </div>
+        <div class="cd-gallery__image-container">
+        <img src="img/3.1.20190318-JackAnstey-DSC07385.jpg" alt="" class="cd-gallery__image">
+      </div>
+            <div class="cd-gallery__image-container">
+        <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8bmF0dXJlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="cd-gallery__image">
+      </div>
+      <div class="cd-gallery__image-container">
+        <img src="https://images.unsplash.com/photo-1586348943529-beaae6c28db9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fG5hdHVyZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="cd-gallery__image">
+      </div>
+      <div class="cd-gallery__image-container">
+        <img src="https://images.unsplash.com/photo-1439853949127-fa647821eba0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fG5hdHVyZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="cd-gallery__image">
+      </div>
+    </div>
+    <div class="cd-row">
+      <div class="cd-gallery__image-container">
+        <img src="img/3.1.20190318-JackAnstey-DSC07385.jpg" alt="" class="gallery__image">
+      </div> 
+      <div class="cd-gallery__image-container">
+        <img src="img/3.2.SealSkinz- Elliot Simpson- High Res-25.jpg" alt="" class="gallery__image">
+      </div>
+      <div class="cd-gallery__image-container">
+        <img src="img/3.3.SealSkinz_LakeDistrict_March19_ByTomKahler_Highres (20 of 72).jpg" alt="" class="gallery__image">
+      </div>
+      <div class="cd-gallery__image-container">
+        <img src="img/3.4.SealSkinz- Elliot Simpson- High Res-29.jpg" alt="" class="gallery__image">
+      </div>
+          <div class="cd-gallery__image-container">
+        <img src="img/3.5.SealSkinz_LakeDistrict_March19_ByTomKahler_Highres (18 of 72).jpg" alt="" class="gallery__image">
+      </div>
+    </div>
+  </section>
+  </div>
+  
+    </div>
+     
+    </div>
+    
+      <div class="photoshoot-section-info-copy">
+          <div class="cd-photoshoots-blurb-block">
+              <div class="text-block-62-copy">Point and shoot</div>
+              <div class="cd-photoshoots-blurb-text">
+                  Directed shoots featuring the incredible talents of photographer influencers including Tom Kahler, Jack Anstey and Elliot...
+                  <br/>
+                  <br/>
+                  ‍
+                  <br/>
+              </div>
+          </div>
+      </div>
+    
+      <section class="cta-wrapper">
+
+        <div tr-scroll-toggle="component" class="cta_component">
+          <div class="cta_sticky">
+            <div tr-section-animation="progress-horizontal" class="cta_progress"></div>
+            <div class="cta_img-wrap w-dyn-list">
+              <div tr-scroll-toggle="list" role="list" class="cta_img-list w-dyn-items">
+                <div role="listitem" class="cta_img-item w-dyn-item">
+                  <div tr-item-animation="scale-to-1" class="cta_img-overflow"><img tr-item-animation="scale-to-1" src="https://assets.website-files.com/638e3eb0a9332ebaeef093b8/638e3f15b3ed3463ebe6038b_pexels-wendy-wei-14397945.jpg" alt="plan" sizes="100vw" srcset="https://assets.website-files.com/638e3eb0a9332ebaeef093b8/638e3f15b3ed3463ebe6038b_pexels-wendy-wei-14397945-p-500.jpg 500w, https://assets.website-files.com/638e3eb0a9332ebaeef093b8/638e3f15b3ed3463ebe6038b_pexels-wendy-wei-14397945-p-800.jpg 800w, https://assets.website-files.com/638e3eb0a9332ebaeef093b8/638e3f15b3ed3463ebe6038b_pexels-wendy-wei-14397945-p-1080.jpg 1080w, https://assets.website-files.com/638e3eb0a9332ebaeef093b8/638e3f15b3ed3463ebe6038b_pexels-wendy-wei-14397945-p-1600.jpg 1600w, https://assets.website-files.com/638e3eb0a9332ebaeef093b8/638e3f15b3ed3463ebe6038b_pexels-wendy-wei-14397945-p-2000.jpg 2000w, https://assets.website-files.com/638e3eb0a9332ebaeef093b8/638e3f15b3ed3463ebe6038b_pexels-wendy-wei-14397945-p-2600.jpg 2600w, https://assets.website-files.com/638e3eb0a9332ebaeef093b8/638e3f15b3ed3463ebe6038b_pexels-wendy-wei-14397945-p-3200.jpg 3200w, https://assets.website-files.com/638e3eb0a9332ebaeef093b8/638e3f15b3ed3463ebe6038b_pexels-wendy-wei-14397945.jpg 4160w" class="cta_img-photo" /></div>
+                </div>
+                <div role="listitem" class="cta_img-item w-dyn-item">
+                  <div tr-item-animation="scale-to-1" class="cta_img-overflow"><img tr-item-animation="scale-to-1" src="https://assets.website-files.com/638e3eb0a9332ebaeef093b8/638e4092e9575c0f9629ae01_walls.jpg" alt="design" sizes="100vw" srcset="https://assets.website-files.com/638e3eb0a9332ebaeef093b8/638e4092e9575c0f9629ae01_walls-p-500.jpg 500w, https://assets.website-files.com/638e3eb0a9332ebaeef093b8/638e4092e9575c0f9629ae01_walls-p-800.jpg 800w, https://assets.website-files.com/638e3eb0a9332ebaeef093b8/638e4092e9575c0f9629ae01_walls-p-1080.jpg 1080w, https://assets.website-files.com/638e3eb0a9332ebaeef093b8/638e4092e9575c0f9629ae01_walls-p-1600.jpg 1600w, https://assets.website-files.com/638e3eb0a9332ebaeef093b8/638e4092e9575c0f9629ae01_walls.jpg 1920w" class="cta_img-photo" /></div>
+                </div>
+                <div role="listitem" class="cta_img-item w-dyn-item">
+                  <div tr-item-animation="scale-to-1" class="cta_img-overflow"><img tr-item-animation="scale-to-1" src="https://assets.website-files.com/638e3eb0a9332ebaeef093b8/638e45c467fd8f44a5687f97_pexels-cottonbro-studio-5474032.jpg" alt="build" sizes="100vw" srcset="https://assets.website-files.com/638e3eb0a9332ebaeef093b8/638e45c467fd8f44a5687f97_pexels-cottonbro-studio-5474032-p-500.jpg 500w, https://assets.website-files.com/638e3eb0a9332ebaeef093b8/638e45c467fd8f44a5687f97_pexels-cottonbro-studio-5474032-p-800.jpg 800w, https://assets.website-files.com/638e3eb0a9332ebaeef093b8/638e45c467fd8f44a5687f97_pexels-cottonbro-studio-5474032-p-1080.jpg 1080w, https://assets.website-files.com/638e3eb0a9332ebaeef093b8/638e45c467fd8f44a5687f97_pexels-cottonbro-studio-5474032-p-1600.jpg 1600w, https://assets.website-files.com/638e3eb0a9332ebaeef093b8/638e45c467fd8f44a5687f97_pexels-cottonbro-studio-5474032-p-2000.jpg 2000w, https://assets.website-files.com/638e3eb0a9332ebaeef093b8/638e45c467fd8f44a5687f97_pexels-cottonbro-studio-5474032-p-2600.jpg 2600w, https://assets.website-files.com/638e3eb0a9332ebaeef093b8/638e45c467fd8f44a5687f97_pexels-cottonbro-studio-5474032-p-3200.jpg 3200w, https://assets.website-files.com/638e3eb0a9332ebaeef093b8/638e45c467fd8f44a5687f97_pexels-cottonbro-studio-5474032.jpg 6720w" class="cta_img-photo" /></div>
+                </div>
+              </div>
+            </div>
+            <div class="cta_content">
+              <p class="cta_numbers"><span tr-scroll-toggle="number-current">0</span> — <span tr-scroll-toggle="number-total">0</span></p>
+              <div class="cta_title-wrap w-dyn-list">
+                <div tr-scroll-toggle="transform-y" role="list" class="cta_title-list w-dyn-items">
+                  <div role="listitem" class="cta_title-item w-dyn-item">
+                    <h2 class="cta_title-heading">plan</h2>
+                  </div>
+                  <div role="listitem" class="cta_title-item w-dyn-item">
+                    <h2 class="cta_title-heading">design</h2>
+                  </div>
+                  <div role="listitem" class="cta_title-item w-dyn-item">
+                    <h2 class="cta_title-heading">build</h2>
+                  </div>
+                </div>
+              </div><a href="research-design-build.html" class="cd_button w-button">Learn More</a>
+            </div>
+          </div>
+          <div tr-scroll-toggle="trigger" class="cta_trigger"></div>
+        </div>
+    
+      </section>
+
+
+     <div class="cd_sections">
+    <h1 class="cd-web-art-heading">
+      WEB ART
+      <br />
+      DIRECTION
+    </h1>
+    <div class="cd-web-art-blurb-block">
+      <div class="cd-web-art-blurb-title">Heading</div>
+      <div class="cd-web-art-blurb-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in porta tellus. Cras vel placerat urna, in semper justo. Sed malesuada sit amet felis eget mattis.
+        <br />
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in porta tellus. Cras vel placerat urna, in semper justo. Sed malesuada sit amet felis eget mattis.
+        <br />
+      </div>
+    </div>
+    <div class="cd_panels">
+      <section class="cd_panel blue">
+        ONE
+      </section>
+      <section class="cd_panel orange">
+        TWO
+      </section>
+      <section class="cd_panel purple">
+        THREE
+      </section>
+      <section class="cd_panel green">
+        FOUR
+      </section>
+    </div>
+    <div class="cd_container-page">
+    </div>
+  </div>
+  <div class="web_art-bottom-buffer">
+  </div>
+
+  
+
+  <div class="wd_ticker-container">
+            
+    <div class="next-container">
+      <div id="bg-block">
+        <span class="next-text">Next</span>
+        <div class="copy-scroll-arrow">
+          <lottie-player id="arrow-right" src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/lottie/next-arrow-to-right-blue.json" background="transparent" speed="1" loop autoplay></lottie-player>
+        </div>
+      </div>
+    </div>
+  
+    <div class="wd_services-ticker-block">
+      <div class="wd_stb_line_single wd_stb_top">
+        <a href="#" class="wd_stb-item wd_card followerchangetest" data-follower-text="VIEW">
+          <!--     <div class="card"> -->
+          <span>COPYWRITING &#9679;</span>
+          <!--     </div> -->
+        </a>
+        <a href="#" class="wd_stb-item wd_card followerchangetest" data-follower-text="VIEW">
+          <span>GRAPHIC DESIGN &#9679;</span>
+        </a>
+        <a href="#" class="wd_stb-item wd_card followerchangetest" data-follower-text="VIEW">
+          <span>WEB DESIGN &#9679;</span>
+        </a>
+        <a href="#" class="wd_stb-item wd_card followerchangetest" data-follower-text="VIEW">
+          <span>PHOTOGRAPHY &#9679;</span>
+        </a>
+        <!--          <a href="#" class="stb-item">
+          <span>Simple 5</span>
+        </a>
+           <a href="#" class="stb-item">
+          <span>Simple 6</span>
+        </a>
+           <a href="#" class="stb-item">
+          <span>Simple 7</span>
+        </a> -->
+      </div>
+    </div>
+
+  <section class="contact-post-section">
+    <div class="contact-title followerchangetest" data-follower-text="GET IN TOUCH!">What story do you want to tell?</div>
+    <div class="contact-sub followerchangetest" data-follower-text="GET IN TOUCH!">Get in touch!</div>
+  </section>
+  
+        </main>
+    </div>
+    <!--smooth-content end -->
+    </div>
+    <!--smooth-wrapper end -->
+
+    <div class="follower cursor" id="cursor">
+      <div class="follower__inner dot"></div>
+      <span class="follower__content"></span>
+  </div>  
+  
+
+  <script src="https://unpkg.com/@barba/core"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/ScrollSmoother.min.js"></script>
+  <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+  <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/SplitText.min.js"></script>
+  <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/Flip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/blotter.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/channelSplitMaterial.min.js"></script>
+  <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/Observer.min.js"></script>
+  <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/DrawSVGPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.2/plyr.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
+  <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/CustomEase.min.js"></script>
+  <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/MorphSVGPlugin.min.js"></script>
+  <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/TextPlugin.min.js"></script>
+  <script type="module" src="js/main-css-promise.js" defer></script>
+  <!-- <script type="module" data-main="js/main.js" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" defer></script> -->
+
+</body>
+
+    </html>
+  

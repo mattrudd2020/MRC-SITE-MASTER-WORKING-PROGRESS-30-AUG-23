@@ -1,0 +1,311 @@
+<html class="no-js is-home" lang="">
+
+<head>
+  <meta charset="utf-8" />
+  <title>How to create page transitions tutorial - Barba.js</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link href="style.css" rel="stylesheet">
+  <link href="subpage.css" rel="stylesheet">
+<link href="transition.css" rel="stylesheet">
+
+</head>
+
+<body data-barba="wrapper">
+<button class="cursors main-cursor"></button>
+<button class="cursors video-cursor"><span class="cursor-text-play">PLAY</span></button>
+<!--<button class="cursor-video-exit"><span class="cursor-text-exit">EXIT</span></button>-->
+<button class="cursor-video-exit">EXIT</button>
+<button class="cursor-read-more">READ MORE</button>
+
+
+
+
+  <!-- ELEMENT ON LOAD - WORK OUT BARBA!  
+
+<nav class="overlay-nav" style="opacity: 0; visibility: hidden;">
+  <svg class="overlay-nav_bg" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <path class="overlay-nav_path" vector-effect="non-scaling-stroke" d="M 0 0 V 0 Q 50 0 100 0 V 0 z"></path>
+</svg>
+</nav> -->
+
+  <div class="transition clip"></div>
+
+  <svg id="loadersvg" viewBox="0 0 1 1" preserveAspectRatio="none">
+    <clipPath id="clippath" clipPathUnits="objectBoundingBox">
+      <path class="swipeup" d="M 0 1 V 1 Q 0.5 1 1 1 V 1 z" />
+    </clipPath>
+  </svg>
+
+  <div class="lightbox" id="lightbox-close">
+    <div class="lightbox__top lightbox-bar"></div>
+    <div class="lightbox__content">
+      <video id="video" width="100%" height="100%" controls playsinline>
+        <source
+          src="https://media-files.vidstack.io/360p.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+    <div class="lightbox__bottom lightbox-bar"></div>
+  </div>
+
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      <main data-barba="container" data-barba-namespace="index">
+
+        <!-- START TEXT FADE AND SWITCH -->
+        <section class="text-container">
+
+          <div class="panel first">
+            <div class="text text1">
+              ONE
+            </div>
+            <div class="text text2">
+              TWO
+            </div>
+            <div class="text text3">
+              THREE
+            </div>
+          </div>
+
+          <div class="panel second">
+            <div id="para-text">
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </div>
+          </div>
+        </section>
+<!-- END TEXT FADE AND SWITCH -->
+
+
+<!-- START SHOWREEL CONTAINER-->
+
+<section class="showreel-section">
+  <div class="showreel">
+    <div id="video-block"></div>
+  </div>
+</section>
+      
+        
+              <div class="why" id="play"></div>
+
+<!-- START HOVER-LIST CONTAINER-->
+
+<div class="hover-image"></div>
+<div class="wrapper">
+  <div class="project-list">
+    <div class="project p-1">
+      <div class="project-title"><h1>Creative Direction</h1></div>
+      <div class="project-categ">Branding</div>
+      <div class="project-overlay"></div>
+    </div>
+    <div class="project p-2">
+      <div class="project-title"><h1>Copwriting</h1></div>
+      <div class="project-categ">Photography</div>
+      <div class="project-overlay"></div>
+    </div>
+    <div class="project p-3">
+      <div class="project-title"><h1>Animation</h1></div>
+      <div class="project-categ">Web Design</div>
+      <div class="project-overlay"></div>
+    </div>
+    <div class="project p-4">
+      <div class="project-title"><h1>Videography</h1></div>
+      <div class="project-categ">Branding</div>
+      <div class="project-overlay"></div>
+    </div>
+    <div class="project p-5">
+      <div class="project-title"><h1>Graphic Design</h1></div>
+      <div class="project-categ">Branding</div>
+      <div class="project-overlay"></div>
+    </div>
+  </div>
+</div>
+
+<!-- END HOVER-LIST CONTAINER-->
+
+            <!-- END SHOWREEL CONTAINER-->
+
+<!-- START HORIZONTAL SCROLL CONTAINER-->
+
+<section id="portfolio" data-bgcolor="black">
+    <div class="container-fluid">
+      <div class="horiz-gallery-wrapper">
+        <div class="horiz-gallery-strip">
+          
+          
+          <div class="project-wrap" >
+           
+            
+<div class="w-layout-grid grid-5">
+  <a href="subpage.html" class="subpage-link-clicker"></a>
+
+<h1 id="w-node-d72ff1e1-c6bc-e75d-1b05-a54b44288d64-8597ecd3" class="heading-20">SEALSKINZ</h1><img src="https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/62d87fb4d09281003bf423bf_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44.jpg" loading="lazy" width="894" id="w-node-ee300000-69b6-47b4-16bd-c9e68c528786-8597ecd3" sizes="(max-width: 991px) 100vw, 894px" srcset="https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/62d87fb4d09281003bf423bf_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44-p-500.jpg 500w, https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/62d87fb4d09281003bf423bf_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44-p-800.jpg 800w, https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/62d87fb4d09281003bf423bf_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44-p-1080.jpg 1080w, https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/62d87fb4d09281003bf423bf_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44.jpg 1500w" alt="" class="image-11">
+<p id="w-node-_71fc457f-375c-e3b1-bae7-fe150333edea-8597ecd3" class="paragraph-2">Creative campaigns conducted as Global Content Manager of this well-known waterproof outdoor accessories brand</p>
+<div id="w-node-a2fed6dd-661f-36bf-46a1-e0219f0c18b2-8597ecd3" class="div-block-38">
+  <div class="text-block-26">1</div>
+</div>
+</div>
+          </div>
+        
+
+          <div class="project-wrap">
+<div class="w-layout-grid grid-5">
+<h1 id="w-node-d72ff1e1-c6bc-e75d-1b05-a54b44288d64-8597ecd3" class="heading-20">BRITISH CYCLING</h1><img src="https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/62d87fb4d09281003bf423bf_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44.jpg" loading="lazy" width="894" id="w-node-ee300000-69b6-47b4-16bd-c9e68c528786-8597ecd3" sizes="(max-width: 991px) 100vw, 894px" srcset="https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/62d87fb4d09281003bf423bf_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44-p-500.jpg 500w, https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/62d87fb4d09281003bf423bf_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44-p-800.jpg 800w, https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/62d87fb4d09281003bf423bf_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44-p-1080.jpg 1080w, https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/62d87fb4d09281003bf423bf_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44.jpg 1500w" alt="" class="image-11">
+<p id="w-node-_71fc457f-375c-e3b1-bae7-fe150333edea-8597ecd3" class="paragraph-2">Creative campaigns conducted as Global Content Manager of this well-known waterproof outdoor accessories brand</p>
+<div id="w-node-a2fed6dd-661f-36bf-46a1-e0219f0c18b2-8597ecd3" class="div-block-38">
+  <div class="text-block-26">2</div>
+</div>
+</div>
+      </div>
+          
+                      <div class="project-wrap">
+<div class="w-layout-grid grid-5">
+<h1 id="w-node-d72ff1e1-c6bc-e75d-1b05-a54b44288d64-8597ecd3" class="heading-20">ICAT</h1><img src="https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/62d87fb4d09281003bf423bf_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44.jpg" loading="lazy" width="894" id="w-node-ee300000-69b6-47b4-16bd-c9e68c528786-8597ecd3" sizes="(max-width: 991px) 100vw, 894px" srcset="https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/62d87fb4d09281003bf423bf_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44-p-500.jpg 500w, https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/62d87fb4d09281003bf423bf_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44-p-800.jpg 800w, https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/62d87fb4d09281003bf423bf_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44-p-1080.jpg 1080w, https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/62d87fb4d09281003bf423bf_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44.jpg 1500w" alt="" class="image-11">
+<p id="w-node-_71fc457f-375c-e3b1-bae7-fe150333edea-8597ecd3" class="paragraph-2">Creative campaigns conducted as Global Content Manager of this well-known waterproof outdoor accessories brand</p>
+<div id="w-node-a2fed6dd-661f-36bf-46a1-e0219f0c18b2-8597ecd3" class="div-block-38">
+  <div class="text-block-26">3</div>
+</div></div>
+
+          </div>
+      
+    
+        </div>
+</div>
+    
+</div>
+  </section>
+
+
+<!-- END HORIZONTAL SCROLL CONTAINER-->
+
+<!-- START LOTTIE SECTION -->
+
+
+<section class="LottieSection">
+  <div class="Lottie-block">
+    <div id="contours"></div>
+  </div>
+</section>
+
+
+<!-- END LOTTIE SECTION -->
+
+
+<!--FEATURED WORK SECTION-->
+<section class="featured-work-title">
+  <div class="paragraph-2 pin-this">FEATURED&nbsp;WORK</div>
+
+<div class="outer-highlight pin-text" data-bgcolor="#7f5af0">
+  <div class="inner-highlight">
+    <div class="heading-highlight">
+      <h1 class="heading">CONNECT<br>OUTDOORS</h1>
+    </div>
+    <div class="image-holder-right"><img src="https://uploads-ssl.webflow.com/62d0475c1da9596a4848eb6d/62fd43fde7d1a61b536148be_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44.jpg" loading="lazy" srcset="https://uploads-ssl.webflow.com/62d0475c1da9596a4848eb6d/62fd43fde7d1a61b536148be_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44-p-500.jpg 500w, https://uploads-ssl.webflow.com/62d0475c1da9596a4848eb6d/62fd43fde7d1a61b536148be_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44-p-800.jpg 800w, https://uploads-ssl.webflow.com/62d0475c1da9596a4848eb6d/62fd43fde7d1a61b536148be_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44-p-1080.jpg 1080w, https://uploads-ssl.webflow.com/62d0475c1da9596a4848eb6d/62fd43fde7d1a61b536148be_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44-p-1600.jpg 1600w, https://uploads-ssl.webflow.com/62d0475c1da9596a4848eb6d/62fd43fde7d1a61b536148be_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44-p-2000.jpg 2000w, https://uploads-ssl.webflow.com/62d0475c1da9596a4848eb6d/62fd43fde7d1a61b536148be_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44-p-2600.jpg 2600w, https://uploads-ssl.webflow.com/62d0475c1da9596a4848eb6d/62fd43fde7d1a61b536148be_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44.jpg 3000w" sizes="48vw" alt="" class="image"></div>
+  </div>
+</div>
+
+<div class="outer-highlight-2" data-bgcolor="#00ffa3">
+  <div class="inner-highlight">
+    <div class="heading-highlight two">
+      <h1 class="heading">LET'S RIDE</h1>
+    </div>
+    <div class="image-holder-left"><img src="https://uploads-ssl.webflow.com/62d0475c1da9596a4848eb6d/62fd43fde7d1a61b536148be_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44.jpg" loading="lazy" srcset="https://uploads-ssl.webflow.com/62d0475c1da9596a4848eb6d/62fd43fde7d1a61b536148be_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44-p-500.jpg 500w, https://uploads-ssl.webflow.com/62d0475c1da9596a4848eb6d/62fd43fde7d1a61b536148be_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44-p-800.jpg 800w, https://uploads-ssl.webflow.com/62d0475c1da9596a4848eb6d/62fd43fde7d1a61b536148be_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44-p-1080.jpg 1080w, https://uploads-ssl.webflow.com/62d0475c1da9596a4848eb6d/62fd43fde7d1a61b536148be_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44-p-1600.jpg 1600w, https://uploads-ssl.webflow.com/62d0475c1da9596a4848eb6d/62fd43fde7d1a61b536148be_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44-p-2000.jpg 2000w, https://uploads-ssl.webflow.com/62d0475c1da9596a4848eb6d/62fd43fde7d1a61b536148be_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44-p-2600.jpg 2600w, https://uploads-ssl.webflow.com/62d0475c1da9596a4848eb6d/62fd43fde7d1a61b536148be_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44.jpg 3000w" sizes="48vw" alt="" class="image"></div>
+  </div>
+</div>
+
+
+<div class="outer-highlight-3" data-bgcolor="#005DFF">
+  <div class="inner-highlight">
+    <div class="heading-highlight three">
+      <h1 class="heading">ACTOR BASE</h1>
+    </div>
+    <div class="image-holder-right"><img src="https://uploads-ssl.webflow.com/62d0475c1da9596a4848eb6d/62fd43fde7d1a61b536148be_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44.jpg" loading="lazy" srcset="https://uploads-ssl.webflow.com/62d0475c1da9596a4848eb6d/62fd43fde7d1a61b536148be_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44-p-500.jpg 500w, https://uploads-ssl.webflow.com/62d0475c1da9596a4848eb6d/62fd43fde7d1a61b536148be_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44-p-800.jpg 800w, https://uploads-ssl.webflow.com/62d0475c1da9596a4848eb6d/62fd43fde7d1a61b536148be_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44-p-1080.jpg 1080w, https://uploads-ssl.webflow.com/62d0475c1da9596a4848eb6d/62fd43fde7d1a61b536148be_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44-p-1600.jpg 1600w, https://uploads-ssl.webflow.com/62d0475c1da9596a4848eb6d/62fd43fde7d1a61b536148be_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44-p-2000.jpg 2000w, https://uploads-ssl.webflow.com/62d0475c1da9596a4848eb6d/62fd43fde7d1a61b536148be_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44-p-2600.jpg 2600w, https://uploads-ssl.webflow.com/62d0475c1da9596a4848eb6d/62fd43fde7d1a61b536148be_Tier%201%20Road%20Cycling%20-%20Germany%20-%20Matthias%20Schindler-44.jpg 3000w" sizes="48vw" alt="" class="image"></div>
+  </div>
+</div>
+</section>
+
+        <!-- START CIRCLE GROW -->
+
+        <div class="container-circle">
+          <div class="circlebox">
+            <svg class="svg-circle" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" width="800" height="800">
+              <defs>
+                <path id="somePath" fill="none" stroke="black" d="M200,50c82.8,0,150,67.2,150,150s-67.2,150-150,150S50,282.8,50,200
+S117.2,50,200,50z" />
+                <clipPath id="theClipPath">
+                  <circle class="masker" r="0" fill="purple" cx="200" cy="200" />
+                </clipPath>
+              </defs>
+              <g id="circleClipPathReveal" clip-path="url(#theClipPath)">
+                <circle r="2000" fill="#42a6e0" cx="200" cy="200" />
+                <image class="wheel" xlink:href="https://assets.codepen.io/4086427/Site+text+wheel.svg" x="50" y="50" width="300" height="300" style: opacity=1 />
+
+              </g>
+
+            </svg>
+
+          </div> <!-- end of #CIRCLEBOX - 1st (top) div housing the wheel --->
+          <div class="spacer1">
+          Spacer 2</div>
+          <div class="contact"><div class="contact-container">
+            <div class="left-col">
+            </div>
+            <div class="right-col">
+              <div class="theme-switch-wrapper">
+            </label>
+          
+          </div>
+              
+              <h1>Contact us</h1>
+              <p>Planning to visit Indonesia soon? Get insider tips on where to go, things to do and find best deals for your next adventure.</p>
+              
+              <form id="cf" type="post">
+                <label id="nameline" for="name"></label>
+                
+                  <div class: "line-add2"><input type="text" id="name" name="name" placeholder="Your Full Name" ><span id="underline1"></span></div>
+           
+                <label for="email"></label>
+            <div class: "line-add2"><input type="email" id="email" name="email" placeholder="Your Email Address" ><span id="underline2"></span></div>
+                <label for="message"></label>
+            <div class: "line-add2"><textarea rows="6" placeholder="Your Message" id="message" name="message" ></textarea><span id="underline3"></span></div>
+                <!--<a href="javascript:void(0)">--><button class="btn" type="submit" id="dont-name-submit" value="Send" name="submit">Send</button><!--</a>-->
+                
+          </form>
+          <div id="error"></div>
+          <div id="success-msg"></div>
+            </div>
+          </div>
+</div>
+        </div><!-- END CONTAINER-CIRCLE DIV -->
+
+        <div class="spacer2" style="color: white">Spacer 3</div>
+
+        <!-- END CIRCLE GROW -->
+<footer class="footer">
+<div class="footer-container">    
+footer text
+</div>
+
+</div>
+</footer>
+
+    </main>
+  </div>
+  <!--smooth-content end -->
+  </div>
+  <!--smooth-wrapper end -->
+
+</body>
+
+<script src="https://unpkg.com/@barba/core"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+<script src="https://assets.codepen.io/4086427/ScrollSmoother.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="https://assets.codepen.io/4086427/SplitText.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.2/plyr.min.js"></script>
+<script src="main-fade.js" defer ></script>
+</html>

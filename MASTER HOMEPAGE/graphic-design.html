@@ -1,0 +1,237 @@
+<html class="no-js is-home" lang="">
+
+<head>
+  <meta charset="utf-8" />
+  <title>How to create page transitions tutorial - Barba.js</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link href="css/style.css" rel="stylesheet">
+<link href="css/transition.css" rel="stylesheet">
+
+</head>
+
+<body data-barba="wrapper">
+<button class="cursors main-cursor"></button>
+<button class="cursors video-cursor"><span class="cursor-text-play">PLAY</span></button>
+<!--<button class="cursor-video-exit"><span class="cursor-text-exit">EXIT</span></button>-->
+<button class="cursor-video-exit">EXIT</button>
+<button class="cursor-read-more">READ MORE</button>
+
+
+
+
+  <!-- ELEMENT ON LOAD - WORK OUT BARBA!  
+
+<nav class="overlay-nav" style="opacity: 0; visibility: hidden;">
+  <svg class="overlay-nav_bg" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <path class="overlay-nav_path" vector-effect="non-scaling-stroke" d="M 0 0 V 0 Q 50 0 100 0 V 0 z"></path>
+</svg>
+</nav> -->
+
+  <div class="transition clip"></div>
+
+  <svg id="loadersvg" viewBox="0 0 1 1" preserveAspectRatio="none">
+    <clipPath id="clippath" clipPathUnits="objectBoundingBox">
+      <path class="swipeup" d="M 0 1 V 1 Q 0.5 1 1 1 V 1 z" />
+    </clipPath>
+  </svg>
+
+  <div class="lightbox" id="lightbox-close">
+    <div class="lightbox__top lightbox-bar"></div>
+    <div class="lightbox__content">
+      <video id="video" width="100%" height="100%" controls playsinline>
+        <source
+          src="https://media-files.vidstack.io/360p.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+    <div class="lightbox__bottom lightbox-bar"></div>
+  </div>
+
+  <div id="smooth-wrapper">
+
+
+    <div id="smooth-content">
+      <main data-barba="container" data-barba-namespace="graphic-design">
+      
+        <div class="graphics-header-section">
+          <div class="header-grid">
+            <div class="graphics-ticker-container">
+        <section class="graphics-ticker-section" id="graphics-ticker">
+          <div class="graphics-container-fluid">
+            <span>GRAPHICS GRAPHICS GRAPHICS</span>
+          </div>
+        </section>
+      </div>
+            <div class="header-right-image"></div>
+            <div class="header-left-image"></div>
+            <div class="header-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+      
+      
+            
+           
+          </div>
+        </div>
+        <div class="graphics-intro-section">
+          <div class="intro-grid">
+            <div class="intro-text-block">
+              <div class="intro-title">LOGOS</div>
+              <div class="intro-title">POSTERS</div>
+              <div class="intro-title">PRESENTATIONS</div>
+              <div class="intro-title">REPORTS</div>
+            </div>
+            <div class="intro-image"></div>
+          </div>
+        </div>
+
+        <section class="icat-blurb split-text_blurb">
+            <section class="icat-blurb split-text_blurb">
+              <div class="icat-spacer-blurb blurb-wrap">
+            <p>We are visual creatures.<br>‍<br>Seeing is believing, design is inherent in everything.<br>‍<br>So combining graphical representations with a sense of order is a captivating pursuit.</p>
+               </div> 
+              </section>
+            </section>
+
+
+        <div class="graphics-logos-section">
+          <div class="logos-grid">
+            <div class="logos-container">
+              <div class="reveal">
+                <div class="image-1-transform-container">
+                <!-- <img class="logos-image-1"> -->
+                <div class="logos-image-1">
+                  <lottie-player class="ab-const-lottie" src="obj/AB_construction_anim.json" background="transparent"  speed="1"  style="width: 100%; height: 100%;" loop autoplay></lottie-player>
+                </div>
+                </div>
+              </div>
+            </div>
+            <div class="logos-number-1-container">
+              <div class="logos-number-1">1</div>
+            </div>
+            <div class="logos-caption-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+            <div class="logos-subtitle-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in porta tellus. Cras vel placerat urna, in semper justo. Sed malesuada sit amet felis eget mattis. Etiam lectus.</div>
+            <div class="logos-image-2"></div>
+            <div class="logos-caption-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fringilla leo neque, eget rhoncu.</div>
+            <div class="g_reveal">
+            <div class="logos-image-3">
+            </div> 
+            </div>
+            
+            <div class="logos-caption-3">Lorem ipsum dolor sit amet, consectetur adipiscing.</div>
+            <div class="logos-subtitle-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in porta tellus. Cras vel placerat urna, in semper justo. Sed malesuada sit amet felis eget mattis. Etiam lectus.</div>
+          </div>
+          <div class="gwrapper ninety-deg">
+            <div class="gbox">LOGOS LOGOS LOGOS&nbsp;
+            </div>
+            <div class="gbox">LOGOS LOGOS LOGOS&nbsp;
+            </div>
+          </div>
+        </div>
+      
+        <div class="graphics-posters-section">
+          <div class="posters-grid">
+            <div class="posters-image-1"></div>
+            <div class="posters-caption-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+            <div class="posters-number-2">2</div>
+            <div class="posters-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in porta tellus. Cras vel placerat urna, in semper justo. Sed malesuada sit amet felis eget mattis. Etiam lectus.</div>
+            <div class="posters-image-2"></div>
+            <div class="posters-caption-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+            <div class="posters-image-3"></div>
+            <div class="posters-caption-3">Lorem ipsum dolor sit amet, consst adipiscing elit. </div>
+            <div class="posters-subtitle-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in porta tellus. Cras vel placerat urna, in semper justo. Sed malesuada sit amet felis eget mattis. Etiam lectus.</div>
+            <div class="posters-image-4"></div>
+            <div class="posters-caption-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+          </div>
+          <div class="gwrapper2 ninety-deg2">
+            <div class="gbox2 posters">POSTERS POSTERS POSTERS&nbsp;
+            </div>
+            <div class="gbox2 posters">POSTERS POSTERS POSTERS&nbsp;
+            </div>
+          </div>
+        </div>
+        <div class="graphics-presentations-section">
+          <div class="presentations-grid">
+            <div class="presentations-image-1"></div>
+            <div class="presentations-caption-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+            <div class="presentations-subtitle-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in porta tellus. Cras vel placerat urna, in semper justo. </div>
+            <div class="reports-number-3">3</div>
+            <div class="presentations-image-2"></div>
+            <div class="presentations-caption-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fringilla leo neque.</div>
+            <div class="presentations-image-3"></div>
+            <div class="presentations-caption-3">Lorem ipsum dolor sit amet, consectetur adipis.</div>
+            <div class="presentations-subtitle-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in porta tellus. Cras vel placerat urna, in semper justo. </div>
+            <div class="presentations-image-4"></div>
+            <div class="presentations-caption-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+          </div>
+          <div class="gwrapper3 ninety-deg3">
+            <div class="gbox3 presentations">PRESENTATIONS PRESENTATIONS PRESENTATIONS&nbsp;
+            </div>
+            <div class="gbox3 presentations">PRESENTATIONS PRESENTATIONS PRESENTATIONS&nbsp;
+            </div>
+          </div>
+            </div>
+          
+        <div class="graphics-reports-section">
+          <div class="reports-grid">
+            <div class="reports-image-1"></div>
+            <div class="reports-caption-1">Lorem ipsum dolor sit amet, consst adipiscing elit. </div>
+            <div class="reports-number-3">4</div>
+            <div class="reports-subtitle-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in porta tellus. Cras vel placerat urna, in semper justo. Sed malesuada sit amet felis eget mattis. Etiam lectus.</div>
+            <div class="reports-image-2"></div>
+            <div class="reports-caption-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+            <div class="reports-image-3"></div>
+            <div class="reports-caption-3">Lorem ipsum dolor sit amet, consectetur adipiscing.</div>
+            <div class="reports-subtitle-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in porta tellus. Cras vel placerat urna, in semper justo. Sed malesuada sit amet felis eget mattis. Etiam lectus.</div>
+            <div class="reports-image-4"></div>
+            <div class="reports-caption-4">Lorem ipsum dolor sit amet, consectetur adipiscing.</div>
+          </div>
+          <div class="gwrapper4 ninety-deg4">
+            <div class="gbox4 reports">REPORTS REPORTS REPORTS&nbsp;
+            </div>
+            <div class="gbox4 reports">REPORTS REPORTS REPORTS&nbsp;
+            </div>
+          </div>
+        </div>
+      
+  
+  
+      </main>
+    </div>
+    <!--smooth-content end -->
+    <div class="follower cursor" id="cursor">
+      <div class="follower__inner dot"></div>
+      <span class="follower__content"></span>
+  </div>  
+
+  </div>
+  <!--smooth-wrapper end -->
+  
+
+  <script src="https://unpkg.com/@barba/core"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/ScrollSmoother.min.js"></script>
+  <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+  <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/SplitText.min.js"></script>
+  <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/Flip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/blotter.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/channelSplitMaterial.min.js"></script>
+  <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/Observer.min.js"></script>
+  <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/DrawSVGPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.2/plyr.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
+  <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/CustomEase.min.js"></script>
+  <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/MorphSVGPlugin.min.js"></script>
+  <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/TextPlugin.min.js"></script>
+  <script type="module" src="js/main-css-promise.js" defer></script>
+  <!-- <script type="module" data-main="js/main.js" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" defer></script> -->
+
+</body>
+
+    </html>
+  

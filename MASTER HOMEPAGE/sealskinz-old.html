@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html class="no-js is-home" lang="">
+
+<head>
+  <meta charset="utf-8" />
+  <title>How to create page transitions tutorial - Barba.js</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link href="css/style.css" rel="stylesheet">
+<link href="css/transition.css" rel="stylesheet">
+
+</head>
+
+<body data-barba="wrapper">
+<button class="cursors main-cursor"></button>
+<button class="cursors video-cursor"><span class="cursor-text-play">PLAY</span></button>
+<!--<button class="cursor-video-exit"><span class="cursor-text-exit">EXIT</span></button>-->
+<button class="cursor-video-exit">EXIT</button>
+<button class="cursor-read-more">READ MORE</button>
+
+
+
+
+  <!-- ELEMENT ON LOAD - WORK OUT BARBA!  
+
+<nav class="overlay-nav" style="opacity: 0; visibility: hidden;">
+  <svg class="overlay-nav_bg" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <path class="overlay-nav_path" vector-effect="non-scaling-stroke" d="M 0 0 V 0 Q 50 0 100 0 V 0 z"></path>
+</svg>
+</nav> -->
+
+  <div class="transition clip"></div>
+
+  <svg id="loadersvg" viewBox="0 0 1 1" preserveAspectRatio="none">
+    <clipPath id="clippath" clipPathUnits="objectBoundingBox">
+      <path class="swipeup" d="M 0 1 V 1 Q 0.5 1 1 1 V 1 z" />
+    </clipPath>
+  </svg>
+
+  <div class="lightbox" id="lightbox-close">
+    <div class="lightbox__top lightbox-bar"></div>
+    <div class="lightbox__content">
+      <video id="video" width="100%" height="100%" controls playsinline>
+        <source
+          src="https://media-files.vidstack.io/360p.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+    <div class="lightbox__bottom lightbox-bar"></div>
+  </div>
+
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      <main data-barba="container" data-barba-namespace="sealskinz">
+  
+        <div class="text-heading-wrapper">
+            <div class="text-heading">
+              <h1>SEALSKINZ</h1>
+            </div>
+            <div class="top-sub-copy-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in porta tellus. Cras vel placerat urna, in semper justo. Sed malesuada sit amet felis eget mattis. Etiam lectus massa, suscipit vitae malesuada a, consequat sed turpis. Donec nec ante tristique, ullamcorper odio quis, fringilla nibh. Nulla facilisi.</div>
+          </div>
+    
+          <div class="top-full-width-image container">
+            <div class="reveal">
+              <img class="top-full-width-image" src="https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/62d8800446880f50ab5b79b9_MTB%20Master%20images%20-%20Selects%20Tier%201-4.jpg">
+            </div>
+          </div>
+    
+          <div class="case-study-1-copy-container">
+            <div class="case-study-1-title">Challenge</div>
+            <div class="sub-copy-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in porta tellus. Cras vel placerat urna, in semper justo. Sed malesuada sit amet felis eget mattis. Etiam lectus massa, suscipit vitae malesuada a, consequat sed turpis. Donec nec ante tristique, ullamcorper odio quis, fringilla nibh. Nulla facilisi.</div>
+          </div>
+    
+          <div class="image-grid">
+            <div class="grid-image-cont"><img data-speed="auto" src="https://cdn.animaapp.com/projects/62d6e181bdfcbf0e72d7f887/releases/62d86d90166c676c6bc343da/img/top-full-width-image@1x.png" /></div>
+            <div class="grid-image-cont"><img data-speed="auto" src="https://assets.codepen.io/4086427/Tier+1+Road+Cycling+-+Germany+-+Matthias+Schindler-57.jpg" /></div>
+            <div class="grid-image-cont"><img data-speed="auto" src="https://assets.codepen.io/4086427/MTB+Master+images+-+Selects+Tier+1-13.jpg" /></div>
+    
+          </div>
+    
+          <div class="line-add"><span id="underline1"></span></div>
+          <section class="orange">
+            <div class="text-sub">This is some text inside of a div block.</div>
+          </section>
+          <div class="pinned-gallery-container">
+            <div class="container subone">
+              <h1>Scroll Down</h1>
+            </div>
+            <div class="container subtwo">
+              <div class="text_area">
+                Glasgow
+              </div>
+              <div class="fading_texts">
+                <div class="text-sub subfirst">
+                  First Text
+                </div>
+                <div class="text-sub subsecond">
+                  Second Text
+                </div>
+                <div class="text-sub subthird">
+                  Third Text
+                </div>
+              </div>
+            </div>
+    
+            <div class="container subthree">
+              <div class="text_area1">
+                Sample Text
+              </div>
+              <div class="fading_texts2">
+                <div class="text-sub subfourth">
+                  Fourth Text
+                </div>
+                <div class="text-sub subfifth">
+                  Fifth Text
+                </div>
+                <div class="text-sub subsixth">
+                  Sixth Text
+                </div>
+              </div>
+            </div>
+            <div class="container one">
+              <h1>End</h1>
+            </div>
+
+  
+        </main>
+    </div>
+    <!--smooth-content end -->
+    </div>
+    <!--smooth-wrapper end -->
+  
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://assets.codepen.io/4086427/ScrollSmoother.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+    <script src="https://assets.codepen.io/4086427/SplitText.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/Flip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/Observer.min.js"></script>
+    <script src="https://matt-rudd.com/JS/DrawSVGPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.2/plyr.min.js"></script>
+    <script type="module" src="js/main.js" defer></script>
+
+
+</body>
+
+    </html>
+  

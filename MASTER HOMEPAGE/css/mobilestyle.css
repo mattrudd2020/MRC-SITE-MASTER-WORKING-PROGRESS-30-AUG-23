@@ -1,0 +1,414 @@
+@font-face {
+  font-family: "Monument Extended-Bold";
+  src: url("https://anima-uploads.s3.amazonaws.com/5c657b96a4a494000c79ed84/MonumentExtended-Bold.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "Rational";
+  src: url("https://assets.codepen.io/4086427/Rene+Bieder+-+RationalDisplayDEMO-SemiBold.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "Rational-light";
+  src: url("https://assets.codepen.io/4086427/RationalTextDEMO-Light.otf")
+    format("opentype");
+}
+
+body {
+  background-color: #f4f4f4;
+  margin: 0;
+}
+
+
+
+
+/* WEB DESIGN SECTION STYLES */
+
+
+
+.wd-header-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1a1a1a;
+  box-sizing: border-box;
+}
+
+.lottie-container {
+  position: absolute;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+      background: linear-gradient(90deg, #00ffa3 50%, #1a1a1a 50%);
+    /* background-color: #00ffa3; */
+    /* mix-blend-mode: multiply; */
+}
+
+.wd-text-container {
+  position: absolute;
+  z-index: 10;
+  width: 50vw;
+  height: 200vh;
+  opacity: 80%;
+  /* background-color: #7f5af0;
+    background-blend-mode: multiply; */
+  box-sizing: border-box;
+}
+
+.top-text-block {
+  height: 50%;
+  /* background: yellow; */
+  box-sizing: border-box;
+}
+.bottom-text-block {
+  height: 50%;
+  background: orange;
+  box-sizing: border-box;
+}
+
+.next-section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: grey;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 48px;
+}
+
+/* .globeLottieSection {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  /*   display: flex;
+  align-items: center; 
+  background-color: #00ffa3;
+  overflow: visible;
+}
+
+.globeLottie-block {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  background: transparent;
+} */
+
+#globe_contours {
+  position: absolute;
+  display: block;
+  width: 100% !important;
+  height: 100vh !important;
+  margin: 0 auto;
+  opacity: 1;
+}
+
+
+
+.buffer2 {
+  height: 100vh;
+  background: #000DFF;
+}
+
+.web-design-blurb {
+  height: 100vh;
+  background: transparent;
+  display: flex;
+}
+
+.web-design-copy-block {
+  position: absolute;
+  width: 50vw;
+  /* margin-left: 50vw; */
+  /* background-color: #00ffa3; */
+  /* opacity: 60%; */
+  height: 100%;
+  z-index: 120;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.web-design-title {
+  box-sizing: border-box;
+font-family: "Monument Extended-Bold";
+  color: #f4f4f4;
+  font-size: 96px;
+  line-height: 96%;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 1px;
+  position: absolute;
+  z-index: 100;
+}
+
+.second-section-overlap {
+  width: 100vw;
+  height: 100%;
+  background-color: purple;
+  opacity: 55%;
+  box-sizing: border-box;
+}
+
+.web-design-copy-block {
+  position: absolute;
+  width: 50vw;
+  /* margin-left: 50vw; */
+  /* background-color: #00ffa3; */
+  /* opacity: 60%; */
+  height: 100%;
+  z-index: 120;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buffer3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: lightblue;
+  position: relative;
+}
+
+.wd-spacer-blurb {
+  width: 50vw;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 0;
+  font-family: "R-txt-book-light";
+  color: #1a1a1a;
+  font-weight: 300;
+  font-size: 1.528vw;
+  line-height: 1.833vw;
+}
+
+.wd_intro_video {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin-top: -100vh;
+  padding: 100 140px;
+  background-color: #1a1a1a;
+}
+
+.wd_video {
+  display: block;
+  overflow:hidden;
+  padding-bottom: 56.25%;
+  padding: 100 140px;
+  background-color: #1a1a1a;
+}
+
+.wd_video_2 {
+  background-color: #F4F6F9;
+}
+
+.wd_para_section {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+ top: 0;
+  left: 0; 
+} 
+.wd_para_container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+
+.wd_parallax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 110%;
+  margin: 0 auto;
+  z-index: -2;
+}
+
+/* ////  MOBILE SECTION STYLES  //// */
+
+
+.phone-container-medium {
+  width: 95%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.lp-phone-mockup-block {
+  background: #f7f7f7;
+  padding: 5.5rem 0;
+  height: 100vh;
+}
+
+.lp-phone-mockup-block h2 {
+  font-weight: 900;
+margin-bottom: 3rem;
+  color: #f4f4f4;
+}
+.lp-phone-mockup-block .lp-phone-mockup-wrapper {
+  display: flex;
+  position: relative;
+
+}
+.lp-phone-mockup-block .lp-phone-mockup-wrapper .lp-phone-mockup-col {
+  width: 50%;
+  flex: 1;
+}
+.lp-phone-mockup-device {
+  position: relative;
+  line-height: 0;
+  height: 100%;
+  max-height: 70vh;
+  aspect-ratio: 0.5;
+}
+.lp-phone-mockup-frame {
+  width: 166%;
+  height: auto;
+  z-index: 10;
+  position: absolute;
+  top: -11.8vmin;
+  left: -11.5vmin;
+  right: 0px;
+  bottom: 0px;
+}
+.lp-phone-mockup-slides-container-outer {
+  width: 100%;
+  height: auto;
+  z-index: 7;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 9px;
+  border-radius: 15%;
+  overflow: hidden;
+  padding-left: 3%;
+  padding-right: 3%;
+  box-sizing: border-box;
+}
+
+.lp-phone-mockup-slides-container {
+  position: relative;
+}
+
+.phone-mockup-slide {
+  /* position:absolute;
+	 top:10px;
+	 left:10px;
+	 right:10px;
+	 bottom:10px;
+	*/
+}
+
+.phone-mockup-slide img {
+  width: 100%;
+  height: auto;
+}
+
+.lpms-spacer {
+	 width: 7rem;
+	 height: 4rem;
+}
+
+.lp-phone-steps-col {
+	 flex: 1;
+	 width: 50%;
+	 box-sizing: border-box;
+}
+
+.lp-phone-mockup-step {
+	 display: flex;
+}
+
+	/* ## BADGE ## */
+
+.lpms-badge-wrapper {
+	 display: flex;
+	 justify-content: center;
+	 align-content: center;
+	 justify-items: center;
+	 align-items: center;
+}
+
+.lpms-badge {
+	 width: 5rem;
+	 height: 5rem;
+	 display: flex;
+	 justify-content: center;
+	 align-content: center;
+	 justify-items: center;
+	 align-items: center;
+	 color: #1a1a1a;
+    font-family: "Monument Extended-Bold";
+	 font-size: 3rem;
+	 font-weight: 900;
+	 background: #f4f4f4;
+	 border-radius: 50%;
+}
+
+.lpms-body {
+    font-family: "Rational-light";
+  color: #f4f4f4;
+	 padding: 0.3rem 0.3rem 0.3rem 3.812rem;
+	 max-width: 26.875rem;
+}
+
+.lpms-body h3 {
+    font-family: "Monument Extended-Bold";
+  color: #f4f4f4;
+	 font-size: 1.75rem;
+	 font-weight: 900;
+	 max-width: 20.625rem;
+	 margin-bottom: 0rem;
+}
+ 
+
+.top-logo-phone {
+  background-color: #f4f4f4;
+  margin: auto;
+  height: 200%;
+  align-items: center;
+}
+
+.Lottie-block-phone {
+    display: block;
+    width: 100% !important;
+  margin: auto;
+    
+}
+    
+#title-phone {
+      display: block;
+      width: 100% !important;
+      height: 100% !important;
+}
+
+#lottie-phone > svg { 
+  display: block;
+  width: 75% !important;
+  margin:auto;
+  padding-top: 10%;
+}
+
+
+
+.spacer-phone {
+  height: 50vh;
+}
+
+/* ////  END MOBILE SECTION STYLES  //// */
+
+
+/* WEB DESIGN SECTION STYLES */

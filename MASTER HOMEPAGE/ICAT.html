@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html class="no-js is-home" lang="">
+
+<head>
+  <meta charset="utf-8" />
+  <title>How to create page transitions tutorial - Barba.js</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link href="css/style.css" rel="stylesheet">
+<link href="css/transition.css" rel="stylesheet">
+
+</head>
+
+<body data-barba="wrapper">
+<button class="cursors main-cursor"></button>
+<button class="cursors video-cursor"><span class="cursor-text-play">PLAY</span></button>
+<!--<button class="cursor-video-exit"><span class="cursor-text-exit">EXIT</span></button>-->
+<button class="cursor-video-exit">EXIT</button>
+<button class="cursor-read-more">READ MORE</button>
+
+
+
+
+  <!-- ELEMENT ON LOAD - WORK OUT BARBA!  
+
+<nav class="overlay-nav" style="opacity: 0; visibility: hidden;">
+  <svg class="overlay-nav_bg" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <path class="overlay-nav_path" vector-effect="non-scaling-stroke" d="M 0 0 V 0 Q 50 0 100 0 V 0 z"></path>
+</svg>
+</nav> -->
+
+  <div class="transition clip"></div>
+
+  <svg id="loadersvg" viewBox="0 0 1 1" preserveAspectRatio="none">
+    <clipPath id="clippath" clipPathUnits="objectBoundingBox">
+      <path class="swipeup" d="M 0 1 V 1 Q 0.5 1 1 1 V 1 z" />
+    </clipPath>
+  </svg>
+
+  <div class="lightbox" id="lightbox-close">
+    <div class="lightbox__top lightbox-bar"></div>
+    <div class="lightbox__content">
+      <video id="video" width="100%" height="100%" controls playsinline>
+        <source
+          src="https://media-files.vidstack.io/360p.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+    <div class="lightbox__bottom lightbox-bar"></div>
+  </div>
+
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      <main data-barba="container" data-barba-namespace="ICAT">
+  
+        <div class="icat-top-section">
+          <div class="icat-top-section-heading-container">
+            <div class="icat-top-section-heading">ICAT</div>
+          </div>
+            <div class="icat-top-section-image-container">
+              <div class="icat-top-section-image"></div>
+              <div class="icat-bottom-section-image"></div>
+                <div class="icat-top-image"></div>
+              </div>
+        </div>
+
+        <section class="icat-blurb split-text_blurb">
+          <div class="icat-spacer-blurb blurb-wrap">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in porta tellus. Cras
+            vel placerat urna, in semper justo. Sed malesuada sit amet felis eget mattis. Etiam lectus massa, suscipit
+            vitae malesuada a butlia consequat sed turpis. Donec nec ante tristique, ullamcorper odio quis a I, fringilla
+            nibh.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in porta tellus. Cras vel placerat
+            urna, in semper justo. Sed malesuada sit amet felis eget mattis. Etiam lectus massa, suscipit vitae malesuada
+            a, consequat sed turpis. Donec nec ante tristique, ullamcorper odio quis, fringilla nibh.</p>
+          </div>
+        </section>
+
+        <section class="icat_intro_video">
+          <video id="wd_video" width="100%" height="100%" loop muted autoplay playsinline>
+            <source src="video/First website video FINAL.mp4" type="video/mp4" />
+          </video>
+        </section>
+    
+          <div class="case-study-1-copy-container">
+            <div class="case-study-1-title">Challenge</div>
+            <div class="sub-copy-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in porta tellus. Cras vel placerat urna, in semper justo. Sed malesuada sit amet felis eget mattis. Etiam lectus massa, suscipit vitae malesuada a, consequat sed turpis. Donec nec ante tristique, ullamcorper odio quis, fringilla nibh. Nulla facilisi.</div>
+          </div>
+    
+          <div class="image-grid">
+            <div class="grid-image-cont"><img data-speed="auto" src="https://cdn.animaapp.com/projects/62d6e181bdfcbf0e72d7f887/releases/62d86d90166c676c6bc343da/img/top-full-width-image@1x.png" /></div>
+            <div class="grid-image-cont"><img data-speed="auto" src="https://assets.codepen.io/4086427/Tier+1+Road+Cycling+-+Germany+-+Matthias+Schindler-57.jpg" /></div>
+            <div class="grid-image-cont"><img data-speed="auto" src="https://assets.codepen.io/4086427/MTB+Master+images+-+Selects+Tier+1-13.jpg" /></div>
+    
+          </div>
+    
+          <section class="icat_process">
+            <div class="icat-process-container">
+              <div class="icat-article-block">
+              <div class="article">
+                <h1></h1>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe corporis laborum commodi ipsa consectetur blanditiis eum praesentium vero sed, alias totam earum, ut et veniam similique dolor dignissimos autem ad? Eveniet porro quaerat maiores non quibusdam
+                doloremque ea rerum repellat, sapiente mollitia temporibus neque quas ut odio tempora! Amet, ullam!
+              </div>
+              <div class="article">
+                <h1></h1>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita temporibus ab aliquid ipsum cum soluta eos ad molestias neque cumque. Cupiditate laborum nam necessitatibus saepe inventore voluptates soluta? Quisquam, ea! Expedita temporibus ab aliquid ipsum cum soluta eos ad molestias neque cumque. Cupiditate laborum nam necessitatibus saepe inventore voluptates soluta? Quisquam, ea!
+              </div>
+              <div class="article">
+                <h1></h1>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, itaque quae! Cupiditate sed consequatur, delectus magni distinctio quam asperiores amet aliquid architecto animi tenetur sit repudiandae deserunt impedit voluptate, corporis eius nobis sequi
+                dolore adipisci, illum quae soluta! Quam dolor perspiciatis repellat maxime quae molestiae sint a nam exercitationem ipsum maiores praesentium magnam suscipit excepturi illo minima, illum blanditiis nesciunt? Voluptatem quia at provident ad ipsa ratione,
+                officia sequi error aliquid, expedita consectetur tempore eius et voluptate debitis praesentium beatae libero minus qui.
+              </div>
+              <div class="article">
+                <h1></h1>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis rem quidem amet voluptas quo sit beatae, eum adipisci doloribus repellat? Expedita temporibus ab aliquid ipsum cum soluta eos ad molestias neque cumque. Cupiditate laborum nam necessitatibus saepe inventore voluptates soluta? Quisquam, ea!
+              </div>
+            </div>
+              <div class="icat-approach-grid">
+                <div class="icat-value">
+                  <div class="icat-numbers"><div class="icat-number">01.</div></div>
+                  <div class="icat-titles"><div class="icat-title">Communication</div></div>
+                  <span class="bottom-side-a"></span>
+                  <span class="bottom-side-b"></span>
+                </div>
+                
+                  <div class="icat-value">
+                    <div class="icat-numbers"><div class="icat-number">02.</div></div>
+                    <div class="icat-titles"><div class="icat-title">Research</div></div>
+                    <span class="bottom-side-a"></span>
+                  <span class="bottom-side-b"></span>
+                </div>
+                
+                <div class="icat-value">
+                  <div class="icat-numbers"><div class="icat-number">03.</div></div>
+                <div class="icat-titles"><div class="icat-title">Creativity</div></div>
+                <span class="bottom-side-a"></span>
+                  <span class="bottom-side-b"></span>
+                </div>
+                
+                <div class="icat-value">
+                  <div class="icat-numbers"><div class="icat-number">04.</div></div>
+                  <div class="icat-titles"><div class="icat-title">Satisfaction</div></div>
+            <span class="bottom-side-a"></span>
+                  <span class="bottom-side-b"></span>  
+                </div>
+            
+            </div>
+            </section>
+
+          <section class="icat-blurb split-text_blurb">
+            <div class="icat-spacer-blurb blurb-wrap">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in porta tellus. Cras
+              vel placerat urna, in semper justo. Sed malesuada sit amet felis eget mattis. Etiam lectus massa, suscipit
+              vitae malesuada a butlia consequat sed turpis. Donec nec ante tristique, ullamcorper odio quis a I, fringilla
+              nibh.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in porta tellus. Cras vel placerat
+              urna, in semper justo. Sed malesuada sit amet felis eget mattis. Etiam lectus massa, suscipit vitae malesuada
+              a, consequat sed turpis. Donec nec ante tristique, ullamcorper odio quis, fringilla nibh.</p>
+            </div>
+          </section>
+
+          <section class="wd_para_section">
+  
+            <div class="wd_para_container">
+              <img class="icat_parallax icat-para-1" src="img/ICAT-pages-iPhone-grid.jpg" alt="Web Design pages grid" />
+            </div>
+          </section>
+
+         
+<section class="results-counter">
+  <div class="number-container">
+    <div class="data">100</div>
+    <span class="results-span">PERCENT INCREASE<BR>IN ENGAGEMENT</span>
+   </div>
+  <div class="number-container">
+    <div class="data">76</div>
+    <span class="results-span">PERCENT INCREASE<BR>IN CLICKTHROUGHS</span>
+   </div>
+  <div class="number-container">
+    <div class="data">67</div>
+    <span class="results-span">PERCENT INCREASE<BR>IN SALES</span>
+   </div>
+</section>
+ 
+<section class="icat-logo-section">
+  <div class="icat-logo-approach-grid">
+  <div class="icat-inner-content-block">
+    <div class="icat-logo-lottie-item">
+      <lottie-player
+      id="icat-logo-lottie-holder1"
+      src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/lottie/AB-VAULT.json">
+</lottie-player> 
+    </div>
+  </div>
+  <div class="icat-inner-content-block">
+    <div class="icat-logo-lottie-item">
+      <lottie-player
+      id="icat-logo-lottie-holder2"
+      src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/lottie/LABAN.json">
+</lottie-player> 
+    </div>
+  </div>
+  <div class="icat-inner-content-block">
+    <div class="icat-logo-lottie-item">
+      <lottie-player
+      id="icat-logo-lottie-holder3"
+      src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/lottie/Shakespeare+Head.json">
+</lottie-player> 
+    </div>
+  </div>
+</div>
+
+</section>
+
+        
+        
+            
+          <div class="spacer-next-contact"></div>
+
+          <div class="wd_ticker-container">
+          
+            <div class="next-container">
+              <div id="bg-block">
+                <span class="next-text">Next</span>
+                <div class="copy-scroll-arrow">
+                  <lottie-player id="arrow-right" src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/lottie/next-arrow-to-right-blue.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                </div>
+              </div>
+            </div>
+          
+            <div class="wd_services-ticker-block">
+              <div class="wd_stb_line_single wd_stb_top">
+                <a href="#" class="wd_stb-item wd_card followerchangetest" data-follower-text="VIEW">
+                  <!--     <div class="card"> -->
+                  <span>British Cycling &#9679;</span>
+                  <!--     </div> -->
+                </a>
+                <a href="#" class="wd_stb-item wd_card followerchangetest" data-follower-text="VIEW">
+                  <span>Sealskinz &#9679;</span>
+                </a>
+                <a href="#" class="wd_stb-item wd_card followerchangetest" data-follower-text="VIEW">
+                  <span>British Cycling &#9679;</span>
+                </a>
+                <a href="#" class="wd_stb-item wd_card followerchangetest" data-follower-text="VIEW">
+                  <span>Sealskinz &#9679;</span>
+                </a>
+                <!--          <a href="#" class="stb-item">
+                  <span>Simple 5</span>
+                </a>
+                   <a href="#" class="stb-item">
+                  <span>Simple 6</span>
+                </a>
+                   <a href="#" class="stb-item">
+                  <span>Simple 7</span>
+                </a> -->
+              </div>
+            </div>
+
+          <section class="contact-post-section">
+            <div class="contact-title followerchangetest" data-follower-text="GET IN TOUCH!">What story do you want to tell?</div>
+            <div class="contact-sub followerchangetest" data-follower-text="GET IN TOUCH!">Get in touch!</div>
+          </section>
+  
+            <div class="spacer2" style="color: white">FINAL BLOCK</div>
+
+
+            <footer class="footer">
+              <div class="footer-container">
+                <div class="footer-content">
+                  <div class="l-footer">
+                    <div class="flex-container">
+          
+          
+                      <lottie-player id="sticker" src="https://lottie.host/05104a62-8f43-47f9-bf00-65cc5542e864/aJfqgRbYkj.json"
+                        background="transparent" style="width: 200px; height: 200px;"></lottie-player>
+                    </div>
+                    <!--
+                    <h1>
+                      <img id="logo"
+                        src="https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/61d44096e7dd66115da6d1ce_WEBSITE%20LOGO%20Matt%20Rudd%20Creative%20LOGO%20MASTER%20white.svg"
+                        alt="">
+                        -->
+                    </h1>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam atque recusandae in sit sunt
+                      molestiae aliquid fugit. Mollitia eaque tempore iure sit nobis? Vitae nemo, optio maiores numquam
+                      quis recusandae.</p>
+                  </div>
+                  <ul class="r-footer">
+                    <div class="list1">
+                      <li>
+                        <h2>
+                          Social</h2>
+          
+                        <ul class="box">
+                          <li><a href="#">Facebook</a></li>
+                          <li><a href="#">Twitter</a></li>
+                          <li><a href="#">Pinterest</a></li>
+                          <li><a href="#">Dribbble</a></li>
+                        </ul>
+                      </li>
+                    </div>
+                    <div class="list2">
+                      <li>
+                        <h2>
+                          Info</h2>
+                        <ul class="box">
+                          <li><a href="#">Blog</a></li>
+                          <li><a href="#">Pricing</a></li>
+                          <li><a href="#">Sales</a></li>
+                          <li><a href="#">Tickets</a></li>
+                        </ul>
+                      </li>
+                    </div>
+          
+                    <div class="list3">
+                      <li>
+                        <h2>
+                          Legal</h2>
+                        <ul class="box">
+                          <li><a href="#">Privacy Policy</a></li>
+                          <li><a href="#">Terms of Use</a></li>
+                          <li><a href="#">Contract</a></li>
+                        </ul>
+                      </li>
+                    </div>
+                  </ul>
+                  <div class="b-footer">
+                    <p>
+                      All rights reserved by Matt Rudd Creative 2022 </p>
+                  </div>
+          
+          
+                </div>
+              </div>
+          
+            </footer> 
+
+          </main>
+        </div>
+        <!--smooth-content end -->
+        <div class="follower cursor" id="cursor">
+          <div class="follower__inner dot"></div>
+          <span class="follower__content"></span>
+      </div>  
+  
+       </div> 
+      <!--smooth-wrapper end -->
+  
+      <script src="https://unpkg.com/@barba/core"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+      <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/ScrollSmoother.min.js"></script>
+      <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/ScrollTrigger.min.js"></script>
+      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+      <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+      <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/SplitText.min.js"></script>
+      <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/Flip.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/blotter.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/channelSplitMaterial.min.js"></script>
+      <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/Observer.min.js"></script>
+      <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/DrawSVGPlugin.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.2/plyr.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
+      <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/CustomEase.min.js"></script>
+      <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/MorphSVGPlugin.min.js"></script>
+      <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/TextPlugin.min.js"></script>
+      <script type="module" src="js/main-css-promise.js" defer></script>
+      <!-- <script type="module" data-main="js/main.js" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" defer></script> -->
+  
+
+
+</body>
+
+    </html>
+  

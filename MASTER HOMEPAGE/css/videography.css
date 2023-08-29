@@ -1,0 +1,218 @@
+body {
+  /* display: block; */
+  box-sizing: border-box;
+  background: #1a1a1a;
+  margin: 0;
+  padding: 0;
+  /* min-height: 100%; */
+  font-family: "Manrope", sans-serif;
+}
+
+.videog-top-section {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #00ffa3;
+  color: #1a1a1a;
+}
+
+.right-side-column {
+  -webkit-text-size-adjust: 100%;
+  --text-color: #111;
+  --bg-color: #b9b3a9;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: #333;
+  font-size: 14px;
+  line-height: 20px;
+  box-sizing: border-box;
+  grid-column-start: 7;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  justify-self: auto;
+}
+
+.left-side-column {
+  -webkit-text-size-adjust: 100%;
+  --text-color: #111;
+  --bg-color: #b9b3a9;
+  color: #333;
+  font-size: 14px;
+  line-height: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding-right: 40px;
+  height: 420vh;
+  object-fit: none;
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+
+.videography-spacer {
+  height: 310vh;
+}
+
+.videog-title {
+  -webkit-text-size-adjust: 100%;
+  --text-color: #111;
+  --bg-color: #b9b3a9;
+  color: #1a1a1a;
+  box-sizing: border-box;
+  border-bottom: 0 #5b5b5b;
+  border-radius: 1px;
+  line-height: 100%;
+  font-weight: 700;
+  margin-top: 0;
+  border-bottom-style: none;
+  font-size: 11.712vh;
+  text-align: center;
+}
+
+.section-28 {
+  -webkit-text-size-adjust: 100%;
+  --text-color: #111;
+  --bg-color: #b9b3a9;
+  color: #333;
+  font-size: 14px;
+  line-height: 20px;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  padding-right: 0;
+  padding-left: 0;
+  background-color: #1a1a1a;
+}
+
+.grid-9 {
+  -webkit-text-size-adjust: 100%;
+  --text-color: #111;
+  --bg-color: #b9b3a9;
+  color: #333;
+  font-size: 14px;
+  line-height: 20px;
+  margin-left: 80px;
+  box-sizing: border-box;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-row-gap: 16px;
+  height: 100vh;
+  grid-auto-flow: row;
+  grid-column-gap: 20px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  width: 100vw;
+}
+
+.location-title {
+  -webkit-text-size-adjust: 100%;
+  --text-color: #111;
+  --bg-color: #b9b3a9;
+  box-sizing: border-box;
+  margin-top: 18vh;
+  border-bottom: 1px solid #5b5b5b;
+  border-radius: 1px;
+  color: #f4f4f4;
+  line-height: 100%;
+  font-weight: 700;
+  font-size: 8.784vh;
+}
+
+.text-block-33 {
+  -webkit-text-size-adjust: 100%;
+  --text-color: #111;
+  --bg-color: #b9b3a9;
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 7.22vh;
+  border: 1px #000;
+  border-radius: 0;
+  color: #f4f4f4;
+  font-weight: 300;
+  font-size: 1.528vw;
+  line-height: 1.833vw;
+}
+
+.videog-subtitle {
+  -webkit-text-size-adjust: 100%;
+  --text-color: #111;
+  --bg-color: #b9b3a9;
+  box-sizing: border-box;
+  border-style: none none solid;
+  border-width: 1px;
+  border-color: #000 #000 #5b5b5b;
+  color: #f4f4f4;
+  height: 2.25vh;
+  margin-top: 13.56vh;
+  margin-bottom: 4.88vh;
+  padding-bottom: 0;
+  border-bottom: 1px solid #5b5b5b;
+  border-radius: 1px;
+  font-size: 1.528vw;
+  line-height: 1.9vh;
+  font-weight: 600;
+}
+
+.map-lottie {
+  -webkit-text-size-adjust: 100%;
+  --text-color: #111;
+  /* --bg-color: #b9b3a9; */
+  color: #333;
+  font-size: 14px;
+  line-height: 20px;
+  box-sizing: border-box;
+  display: flex;
+  /* width: 100% !important;
+  height: 100% !important; */
+  /* margin: 0 auto; */
+  /* margin-top: 4.88vh; */
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  /* background-color: #808c91; */
+}
+
+.videog-lottie-block {
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+.videog-lottie-section {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.image-12 {
+  height: 100vh;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border: 0;
+  width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.next-spacer {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}

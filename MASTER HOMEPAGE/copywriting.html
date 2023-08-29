@@ -1,0 +1,202 @@
+<html class="no-js is-home" lang="">
+
+<head>
+  <meta charset="utf-8" />
+  <title>How to create page transitions tutorial - Barba.js</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link href="css/style.css" rel="stylesheet">
+<link href="css/transition.css" rel="stylesheet">
+
+</head>
+
+<body data-barba="wrapper">
+<button class="cursors main-cursor"></button>
+<button class="cursors video-cursor"><span class="cursor-text-play">PLAY</span></button>
+<!--<button class="cursor-video-exit"><span class="cursor-text-exit">EXIT</span></button>-->
+<button class="cursor-video-exit">EXIT</button>
+<button class="cursor-read-more">READ MORE</button>
+
+
+
+
+  <!-- ELEMENT ON LOAD - WORK OUT BARBA!  
+
+<nav class="overlay-nav" style="opacity: 0; visibility: hidden;">
+  <svg class="overlay-nav_bg" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <path class="overlay-nav_path" vector-effect="non-scaling-stroke" d="M 0 0 V 0 Q 50 0 100 0 V 0 z"></path>
+</svg>
+</nav> -->
+
+  <div class="transition clip"></div>
+
+  <svg id="loadersvg" viewBox="0 0 1 1" preserveAspectRatio="none">
+    <clipPath id="clippath" clipPathUnits="objectBoundingBox">
+      <path class="swipeup" d="M 0 1 V 1 Q 0.5 1 1 1 V 1 z" />
+    </clipPath>
+  </svg>
+
+  <div class="lightbox" id="lightbox-close">
+    <div class="lightbox__top lightbox-bar"></div>
+    <div class="lightbox__content">
+      <video id="video" width="100%" height="100%" controls playsinline>
+        <source
+          src="https://media-files.vidstack.io/360p.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+    <div class="lightbox__bottom lightbox-bar"></div>
+  </div>
+
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      <main data-barba="container" data-barba-namespace="copywriting">
+        
+        <div class="copyw-container">
+
+          <div class="copyw-section copy-title-page">
+            <div class="text-block-49">COPYWRITING</div>
+            <div class="copy-scroll-arrow">
+              <lottie-player src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/arrow.json" background="transparent" speed="1" loop autoplay></lottie-player>
+            </div>
+          </div>
+  
+          <div class="copyw-section beginning-section">
+            <div class="beginning-title">In the Beginning was the...</div>
+            <div class="beginning-text-block"><span>Words came first. </span><span class="text-span">They should always come first in any campaign. They serve as the foundation for any idea or plan. They’re like spokes in a wheel, creating the tension necessary to hold things together and create movement. Choosing the right ones is a skill in itself, especially as language is an ever-evolving, living collection of textures and nuances. <br><br>Words have to work well with their graphical friends - and that’s where I come in. Words were in fact my first love, design coming later as a way of articulating.</span></div>
+            <div class="div-block-85"></div>
+          </div>
+  
+          <div class="copyw-section word-section">
+            <div class="big-w">W</div>
+            <div class="div-block-86">
+              <div class="big-o">o</div>
+              <div class="text-block-58">Photo: Martha Cooper</div>
+            </div>
+            <div class="big-r">r</div>
+            <div class="big-d">d</div>
+          </div>
+  
+          <div class="copyw-section services-section">
+            <h1 class="services-heading">Services</h1>
+            <div class="copy-copy-block">
+              <div class="copy-sub-heading shortform">Shortform</div>
+              <div class="copy-sub-heading longform">Shortform</div>
+              <div class="copy-sub-heading proofreading"><br>Proofreading</div>
+              <div class="copy-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in porta tellus. Cras vel placerat urna, in semper justo. Sed malesuada sit amet felis eget mattis. Etiam lectus massa, suscipit vitae malesuada a, consequat sed turpis.</div>
+              <div class="copy-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in porta tellus. Cras vel placerat urna, in semper justo. Sed malesuada sit amet felis eget mattis. Etiam lectus massa, suscipit vitae malesuada a, consequat sed turpis.</div>
+              <div class="copy-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in porta tellus. Cras vel placerat urna, in semper justo. Sed malesuada sit amet felis eget mattis. Etiam lectus massa, suscipit vitae malesuada a, consequat sed turpis.</div>
+            </div>
+            <div class="text-block-53">Something here to read as the best line of copy ever to grace a computer screen</div>
+          </div>
+  
+          <div class="copyw-section copy-example-1">
+            <div class="copy-ex-1-block">
+              <h1 class="copy-ex-1-text">Pedals are essential. Without those you’re not getting very far!</h1>
+              <div class="copy-ex-1-caption">British Cycling - 'Let's Ride' blog</div>
+            </div>
+            <div class="copy-ex-1-image"></div>
+          </div>
+  
+          <div class="copyw-section quote-section">
+            <div class="copy-clarity-backdrop">CLARITY</div>
+            <div class="copy-simplicity-backdrop">SIMPLICITY</div>
+            <div class="quote-section-body">
+              <h1 class="quote-main-text">Not that the story need be long, but it will take a long while to make it short.</h1>
+              <div class="quote-body-text">Be clear. Keep it simple. <br><br>Keys to great copy. <br><br>That’s the theory anyway. In reality, being clear takes work, researching the field and honing a razor-sharp message that cuts through. <br><br>Keeping it simple often isn’t that simple - there are choices to be made, and more work to strip out and strip down until words on page or screen hit just the right frequency for readers to tune into.</div>
+              <div class="quote-caption">Henry David Thoreau</div>
+            </div>
+          </div>
+  
+          <div class="copyw-section copy-example-2">
+            <div class="copy-ex-2-image"></div>
+            <div class="copy-ex-2-block">
+              <h1 class="copy-ex-2-text">A bassline to seperate window from frame.</h1>
+              <div class="copy-ex-2-caption">DJ&nbsp;History website</div>
+            </div>
+          </div>
+  
+          <div class="copyw-section big-idea-section">
+            <div class="big-section-container"><img src="https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/6393cc55196c5b98bfe56d2b_rohit-tandon-9wg5jCEPBsw-unsplash.jpg" loading="lazy" class="big-idea-image" sizes="(max-width: 479px) 11vw, (max-width: 767px) 13vw, (max-width: 991px) 14vw, 15vw" srcset="https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/6393cc55196c5b98bfe56d2b_rohit-tandon-9wg5jCEPBsw-unsplash-p-500.jpg 500w, https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/6393cc55196c5b98bfe56d2b_rohit-tandon-9wg5jCEPBsw-unsplash-p-800.jpg 800w, https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/6393cc55196c5b98bfe56d2b_rohit-tandon-9wg5jCEPBsw-unsplash-p-1080.jpg 1080w, https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/6393cc55196c5b98bfe56d2b_rohit-tandon-9wg5jCEPBsw-unsplash-p-1600.jpg 1600w, https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/6393cc55196c5b98bfe56d2b_rohit-tandon-9wg5jCEPBsw-unsplash.jpg 1920w"></div>
+            <div class="big-section-copy">That’s the theory anyway. In reality, being clear takes work, researching the field and honing a razor-sharp message that cuts through. <br><br>Keeping it simple often isn’t that simple - there are choices to be made, and more work to strip out and strip down until words on page or screen hit just the right frequency, with no distortion.</div>
+            <h1 class="big-idea-title">big idea</h1>
+          </div>
+  
+          <div class="copyw-section copy-example-3">
+            <div class="copy-ex-3-block">
+              <h1 class="copy-ex-3-text">Sencha makes three-dimensional music - a kind that invites you to really lean in and listen, get immersed in its cinematic vibrations. <br><br>These are instrumental sounds that defy clear genre labels, joining dots between electronic, classical and hip hop styles. There’s an order here, but a lightness, too. <br><br>A hopeful glow even - the kind that transforms.</h1>
+              <div class="copy-ex-3-caption"><span class="text-span-2">Sencha</span> <span>bio for Spotify</span></div>
+            </div>
+            <div class="copy-ex-3-image"></div>
+          </div>
+  
+          <div class="copyw-section final-text-section">
+            <span class="final-text-text">Writing with soul to inspire</span>
+            <span class="final-text-text">positive action</span>
+          </div>
+  
+          <div class="copyw-section back-home-section">
+            <div class="flex-container">
+              <a href="index.html">
+              <lottie-player id="bh-sticker" class="followerchangetest" data-follower-text="CLICK" src="Lottie/back-home-sticker4.json"
+              background="transparent"></lottie-player>
+            </a>
+    </div>
+
+  
+          <!-- <div class="copyw-section copy-title-page">
+            <div class="text-block-49">COPYWRITING</div>
+          </div> -->
+  
+        </div> <!-- end of container -->
+  
+        </main>
+    </div>
+    <!--smooth-content end -->
+    </div>
+    <!--smooth-wrapper end -->
+
+    <div class="follower cursor" id="cursor">
+      <div class="follower__inner dot"></div>
+      <span class="follower__content"></span>
+  </div>  
+
+    <div class="hover-reveal">
+      <div class="hover-reveal__inner">
+        <div class="hover-reveal__img"></div>
+      </div>
+    </div>
+
+    <!-- <div class="content__overlay">
+      <div class="overlay__inner"></div>
+    </div> -->
+  
+
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/ScrollSmoother.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/SplitText.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/Flip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/blotter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/channelSplitMaterial.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/Observer.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/DrawSVGPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.2/plyr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/CustomEase.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/MorphSVGPlugin.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/TextPlugin.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/ScrollToPlugin.min.js"></script>
+    <script type="module" src="js/main-css-promise.js" defer></script>
+    
+    
+    </body>
+    </html>
+  

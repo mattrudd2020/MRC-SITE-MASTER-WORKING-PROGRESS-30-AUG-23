@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Gsap Phone Mock -FIXED - image change</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/transition.css" rel="stylesheet">
+
+
+</head>
+
+<body data-barba="wrapper">
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      <main data-barba="container" data-barba-namespace="web-design">
+      
+
+         
+        <div class="spacer-phone"></div>
+
+        <div class="lp-phone-mockup-block">
+          <div class="phone-container-medium">
+            <h2></h2>
+            <div class="lp-phone-mockup-wrapper">
+              <div class="lp-phone-mockup-col">
+                <div class="lp-phone-mockup-device">
+                  <div class="lp-phone-mockup-slides-container-outer">
+        
+                    <!-- THE SLIDES OF THE MOCK LEFT -->
+                    <div class="lp-phone-mockup-slides-container">
+                      <div class="phone-mockup-slide phone-mockup-slide-1">
+                        <div class="top-logo-phone" id="lottie-phone">
+                          <div class="LottieSection-phone">
+                            <div class="Lottie-block-phone">
+                              <div id="title-phone"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+        
+                      <div class="phone-mockup-slide phone-mockup-slide-2" data-slide-id="2">
+                        <img src="https://af18.duko.at/gsap-issue/step2.jpg" alt="Alt" />
+                      </div>
+        
+                      <div class="phone-mockup-slide phone-mockup-slide-3" data-slide-id="3">
+                        <img src="https://af18.duko.at/gsap-issue/step3.jpg" alt="Alt" />
+                      </div>
+        
+                      <div class="phone-mockup-slide phone-mockup-slide-4" data-slide-id="4">
+                        <img src="https://af18.duko.at/gsap-issue/step4.jpg" alt="Alt" />
+                      </div>
+                    </div>
+        
+                  </div>
+                  <img src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/MRC+IMAGES/iPhone+14+Pro+Mockup-edited+site+use.png" class="lp-phone-mockup-frame" alt="Phone frame">
+                </div>
+              </div>
+              <div class="lpms-spacer">&nbsp;</div>
+              <div class="lp-phone-steps-col">
+                <div class="lp-phone-mockup-steps">
+        
+                    <!-- STEPS TEXT RIGHT -->  
+                  <div class="lp-phone-mockup-step lp-phone-mockup-step-1">
+                    <div class="lpms-badge-wrapper">
+                      <div class="lpms-badge">1</div>
+                    </div>
+                    <div class="lpms-body">
+                      <h3>Orange</h3>
+                      <p>Lorem Ipsum dolor sit amet.</p>
+                    </div>
+                  </div>
+                  
+                  <div class="lp-phone-mockup-step lp-phone-mockup-step-2">
+                    <div class="lpms-badge-wrapper">
+                      <div class="lpms-badge">2</div>
+                    </div>
+                    <div class="lpms-body">
+                      <h3>Pink</h3>
+                      <p>Lorem Ipsum dolor sit amet.</p>
+                    </div>
+                  </div>
+                  
+                  <div class="lp-phone-mockup-step lp-phone-mockup-step-3">
+                    <div class="lpms-badge-wrapper">
+                      <div class="lpms-badge">3</div>
+                    </div>
+                    <div class="lpms-body">
+                      <h3>Yellow</h3>
+                      <p>Lorem Ipsum dolor sit amet.</p>
+                    </div>
+                  </div>
+                  
+                  <div class="lp-phone-mockup-step lp-phone-mockup-step-4">
+                    <div class="lpms-badge-wrapper">
+                      <div class="lpms-badge">4</div>
+                    </div>
+                    <div class="lpms-body">
+                      <h3>Green</h3>
+                      <p>Lorem Ipsum dolor sit amet.</p>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="spacer-phone"></div>
+
+
+</main>
+</div>
+<!--smooth-content end -->
+<div class="follower cursor" id="cursor">
+  <div class="follower__inner dot"></div>
+  <span class="follower__content"></span>
+</div>  
+
+</div>
+<!--smooth-wrapper end -->
+
+
+<script src="https://unpkg.com/@barba/core"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+<script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/ScrollSmoother.min.js"></script>
+<script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+<script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/SplitText.min.js"></script>
+<script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/Flip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/blotter.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/channelSplitMaterial.min.js"></script>
+<script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/Observer.min.js"></script>
+<script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/DrawSVGPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.2/plyr.min.js"></script>
+<script type="module" src="js/mobile.js" defer></script>
+
+</body>
+</html>
+
+

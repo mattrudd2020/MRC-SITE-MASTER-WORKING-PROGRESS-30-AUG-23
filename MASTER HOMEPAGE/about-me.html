@@ -1,0 +1,217 @@
+<html class="no-js is-home" lang="">
+
+<head>
+  <meta charset="utf-8" />
+  <title>How to create page transitions tutorial - Barba.js</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/transition.css" rel="stylesheet">
+</head>
+
+<body data-barba="wrapper">
+  <button class="cursors main-cursor"></button>
+  <button class="cursors video-cursor"><span class="cursor-text-play">PLAY</span></button>
+  <!--<button class="cursor-video-exit"><span class="cursor-text-exit">EXIT</span></button>-->
+  <button class="cursor-video-exit">EXIT</button>
+  <button class="cursor-read-more">READ MORE</button>
+
+
+
+
+  <!-- ELEMENT ON LOAD - WORK OUT BARBA!  
+
+<nav class="overlay-nav" style="opacity: 0; visibility: hidden;">
+  <svg class="overlay-nav_bg" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <path class="overlay-nav_path" vector-effect="non-scaling-stroke" d="M 0 0 V 0 Q 50 0 100 0 V 0 z"></path>
+</svg>
+</nav> -->
+
+  <div class="transition clip"></div>
+
+  <svg id="loadersvg" viewBox="0 0 1 1" preserveAspectRatio="none">
+    <clipPath id="clippath" clipPathUnits="objectBoundingBox">
+      <path class="swipeup" d="M 0 1 V 1 Q 0.5 1 1 1 V 1 z" />
+    </clipPath>
+  </svg>
+
+  <div class="lightbox" id="lightbox-close">
+    <div class="lightbox__top lightbox-bar"></div>
+    <div class="lightbox__content">
+      <video id="video" width="100%" height="100%" controls playsinline>
+        <source src="https://media-files.vidstack.io/360p.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="lightbox__bottom lightbox-bar"></div>
+  </div>
+
+  <div id="smooth-wrapper">
+
+
+    <div id="smooth-content">
+      <main data-barba="container" data-barba-namespace="about-me">
+
+
+
+        <div class="about-me-top-section">
+
+
+
+          <div class="about-me-top-section-heading-container">
+            <div class="about-me-top-section-heading">ABOUT&nbsp;ME</div>
+          </div>
+          <div class="about-me-top-section-image-container">
+            <video src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/video/me-banksy.mp4" type="video/mp4"
+              muted class="about-me-top-section-video">
+            </video>
+          </div>
+        </div>
+
+
+        <!-- START APPROACH SECTION -->
+        <section class="smiley_section" data-bgcolor="#f4f4f4">
+
+
+          <div class="border_container" id="border_cont_3">
+            <div class="divider_line">
+              <div class="border_line3"></div>
+            </div>
+            <div class="subtitle_lottie-wrapper">
+              <div class="section-subtitle">
+                <h2 id="section_title2" class="section_title_header">CORE VALUES</h2>
+              </div>
+              <div class="section_lottie" id="smiley_lottie">
+                <lottie-player class="squashed-globe"
+                  src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/lottie/smiley_3d.json"
+                  background="transparent" speed="1" style="width: 88px;" loop autoplay></lottie-player>
+              </div>
+            </div>
+          </div>
+    <div class="blurb-wrapper">
+      <section class="icat-blurb split-text_blurb">
+        <div class="black-p blurb-wrap">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in porta tellus. Cras
+          vel placerat urna, in semper justo. Sed malesuada sit amet felis eget mattis. Etiam lectus massa, suscipit
+          vitae malesuada a butlia consequat sed turpis. Donec nec ante tristique, ullamcorper odio quis a I, fringilla
+          nibh.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in porta tellus. Cras vel placerat
+          urna, in semper justo. Sed malesuada sit amet felis eget mattis. Etiam lectus massa, suscipit vitae malesuada
+          a, consequat sed turpis. Donec nec ante tristique, ullamcorper odio quis, fringilla nibh.</p>
+        </div>
+      </section>
+  </div>
+
+    </section>
+
+
+
+    <section class="mrc_mcr_section" data-bgcolor="#f4f4f4">
+      <lottie-player id="mrc_mcr"
+        src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/lottie/MRC+%3E+MCR+staggered-comp.json"
+        background="transparent"></lottie-player>
+      <div class="mrc_mcr_text">
+        <h1 id="mrc">Matt Rudd Creative</h1>
+        <h1 id="mcr">Manchester</h1>
+      </div>
+    </section>
+
+
+
+
+    <section class="playlist_section" data-bgcolor="f8f8f8">
+
+      <div class="border_container" id="border_cont_3">
+        <div class="divider_line">
+          <div class="border_line3"></div>
+        </div>
+        <div class="subtitle_lottie-wrapper">
+          <div class="section-subtitle">
+            <h2 id="section_title2" class="section_title_header">AFTER HOURS</h2>
+          </div>
+          <div class="section_lottie" id="disco_lottie">
+            <lottie-player class="squashed-globe"
+              src="https://assets7.lottiefiles.com/packages/lf20_5rxtcrxl.json"
+              background="transparent" speed="1" style="width: 4rem; height: 4rem;" loop autoplay></lottie-player>
+          </div>
+        </div>
+      </div>
+
+      
+      <div id="spot-embed-iframe"></div>
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6sNhEGW5Hnv3yqTw6haCzH?utm_source=generator&theme=0" width="28%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </section>
+
+    <section class="about-me-horizontal" data-bgcolor="#1a1a1a">
+      <div class="about-me-pin-wrap">
+        <div class="about-me-animation-wrap about-me-to-right">
+
+          <div class="about-me-item" id="about-me-one"><img class="blue-about-image"
+              src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/MRC+IMAGES/ABOUT-ME/Dj-frame.jpg" alt="Alt" />
+          </div>
+          <div class="about-me-item"><img class="blue-about-image"
+              src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/MRC+IMAGES/ABOUT-ME/Snowboarding-face.jpg"
+              alt="Alt" /></div>
+          <div class="about-me-item"><img class="blue-about-image"
+              src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/MRC+IMAGES/ABOUT-ME/Tandem-Dad.jpg"
+              alt="Alt" /></div>
+          <div class="about-me-item"><img class="blue-about-image"
+              src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/MRC+IMAGES/ABOUT-ME/canoe-about.jpg"
+              alt="Alt" /></div>
+          <div class="about-me-item"><img class="blue-about-image"
+              src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/MRC+IMAGES/ABOUT-ME/fairfield-about.jpg"
+              alt="Alt" /></div>
+          <div class="about-me-item" id="about-me-quote"><span id="about-me-nudge-quote">For me, creativity is a way of
+              bringing light where there is dark.</span></div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+    <div id="container_am" touch-action="none"></div>
+
+
+    <section class="contact-post-section ab_footer">
+      <div class="contact-title ab_footer followerchangetest" data-follower-text="GET IN TOUCH!">What story do you want to tell?
+      </div>
+      <div class="contact-sub ab_footer followerchangetest" data-follower-text="GET IN TOUCH!">Get in touch!</div>
+    </section>
+
+    </main>
+  </div>
+  <!--smooth-content end -->
+  </div>
+  <!--smooth-wrapper end -->
+
+
+  <script src="https://unpkg.com/@barba/core"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/ScrollSmoother.min.js"></script>
+  <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+  <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/SplitText.min.js"></script>
+  <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/Flip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/blotter.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/channelSplitMaterial.min.js"></script>
+  <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/Observer.min.js"></script>
+  <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/DrawSVGPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.2/plyr.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
+  <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/CustomEase.min.js"></script>
+  <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/MorphSVGPlugin.min.js"></script>
+  <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/TextPlugin.min.js"></script>
+  <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/GSAP/ScrollToPlugin.min.js"></script>
+  <script type="module" src="js/main-css-promise.js" defer></script>
+
+</body>
+
+</html>

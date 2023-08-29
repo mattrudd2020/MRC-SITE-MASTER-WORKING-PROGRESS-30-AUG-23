@@ -1,0 +1,376 @@
+@font-face {
+    font-family: "Monument Extended-Bold";
+    src: url("https://anima-uploads.s3.amazonaws.com/5c657b96a4a494000c79ed84/MonumentExtended-Bold.otf")
+      format("opentype");
+  }
+  /*
+  html {
+    --color: "black";
+  }
+*/
+  #smooth-wrapper {
+    overflow: hidden;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  #smooth-content {
+    overflow: visible;
+    width: 100%;
+  }
+  
+  body {
+    display: block;
+    /*background: black;*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Monument Extended-Bold";
+  }
+  
+  /* TOP HALF STYLES */
+  
+
+  .ts-line {
+    overflow: hidden;
+    padding: 0 0 0em 0;
+    margin: 0 0 0em;
+  }
+  
+  .text-heading-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 33vh;
+    padding-right: 10vw;
+    padding-left: 10vw;
+    padding-top: 150px;
+    padding-bottom: 100px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-sizing: border-box;
+  }
+  
+  .text-heading {
+  }
+  
+  h1 {
+    font-size: 4em;
+    margin: 0;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    font-family: "Monument Extended-Bold";
+    letter-spacing: 0.05em;
+    padding-bottom: 10px;
+  }
+  h1 > div {
+    position: relative;
+    margin: 0;
+  }
+  
+  .line-add {
+    position: relative;
+    padding-left: 10vw;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+  }
+  
+  #underline1 {
+    background-color: white;
+    height: 1px;
+    position: absolute;
+  }
+  
+  .top-sub-copy-block {
+    font-family: Rationaldisplay, sans-serif;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 100;
+    display: block;
+    line-height: 1.3;
+    padding-top: 0vh;
+    padding-bottom: 0vh;
+  }
+  
+  .sub-copy-block {
+    font-family: Rationaldisplay, sans-serif;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 100;
+    display: block;
+    line-height: 1.3;
+    padding-top: 0vh;
+    padding-bottom: 0vh;
+  }
+  
+  .top-full-width-image-container {
+  }
+  
+  .top-full-width-image {
+    overflow: visible;
+    width: 100%;
+    height: 50vh;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  
+  .case-study-1-copy-container {
+    display: -ms-grid;
+    display: grid;
+    height: 33vh;
+    padding-top: 65px;
+    padding-bottom: 65px;
+    padding-right: 10vw;
+    padding-left: 10vw;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto;
+    grid-template-rows: auto;
+  }
+  
+  .case-study-1-title {
+    font-family: Monument extended, sans-serif;
+    color: #fff;
+    font-size: 30px;
+    -ms-grid-column: span 1;
+    grid-column-start: span 1;
+    -ms-grid-column-span: 1;
+    grid-column-end: span 1;
+    -ms-grid-row: span 1;
+    grid-row-start: span 1;
+    -ms-grid-row-span: 1;
+    grid-row-end: span 1;
+    -ms-grid-column-align: start;
+    justify-self: start;
+    -ms-grid-row-align: center;
+    align-self: center;
+  }
+  
+  .case-study-1-copy {
+    font-family: Rationaldisplay, sans-serif;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 100;
+    text-align: left;
+    -ms-grid-column: span 1;
+    grid-column-start: span 1;
+    -ms-grid-column-span: 1;
+    grid-column-end: span 1;
+    -ms-grid-row: span 1;
+    grid-row-start: span 1;
+    -ms-grid-row-span: 1;
+    grid-row-end: span 1;
+    -ms-grid-row-align: start;
+    align-self: start;
+    -ms-grid-column-align: center;
+    justify-self: center;
+  }
+  
+  .image-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 1.5rem;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    margin: 0 auto;
+  
+    padding-bottom: 10vh;
+    z-index: -1;
+  }
+  
+  .image-grid .grid-image-cont {
+    position: relative;
+    height: 40vh;
+    overflow: hidden;
+    padding-top: 0;
+  }
+  
+  .image-grid img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 160%;
+    object-fit: cover;
+  }
+  .image-grid .grid-image-cont:nth-child(1) {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+  
+  .image-grid .grid-image-cont:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  
+  .image-grid .grid-image_cont:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  
+  #mtb-full-width {
+    width: 100vw;
+    opacity: 0;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .image-grid {
+      --num-cols: 2;
+      --row-height: 200px;
+    }
+  }
+  
+  
+  /* SIDEBAR STYLES */
+  
+  .pinned-gallery-container {
+    background: black;
+  }
+  
+  .container {
+    position: relative;
+    height: 100vh;
+  }
+  .container.subone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container.subtwo {
+    /*background: transparent;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.05em;
+    font-size: 2em;
+    color: white;
+    margin: 0;
+    width: 40vw;
+  }
+  .container.subthree {
+    /*background: transparent;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.05em;
+    font-size: 2em;
+    color: white;
+    margin-top: -100vh;
+    width: 40vw;
+  }
+  
+  .container h1 {
+    text-align: center;
+    color: white;
+  }
+  .container .text_area {
+    padding: 0px;
+    margin-left: 0;
+    width: 40vw;
+    text-align: center;
+  }
+  .container .fading_texts {
+    position: absolute;
+    width: 100%;
+    left: 35vw;
+    top: 0;
+  }
+  .container .fading_texts2 {
+    position: absolute;
+    width: 100%;
+    left: 35vw;
+    top: 0;
+    padding: 0;
+  }
+  .container .fading_texts .text-sub {
+    position: absolute;
+    width: 60vw;
+    margin-right: 0;
+    height: 100vh;
+    /*background-color: #ccc;*/
+    padding: 0;
+  }
+  
+  .container .fading_texts2 .text-sub {
+    position: absolute;
+    width: 60vw;
+    margin-right: 0;
+    height: 100vh;
+    /*background-color: #ccc;*/
+    padding: 0;
+  }
+  
+  .text-sub.subfirst {
+    background-image: url("https://assets.codepen.io/4086427/Park+with+needle+statue+copy.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+  }
+  
+  .text-sub.subsecond {
+    background-image: url("https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/62d8800446880f50ab5b79b9_MTB%20Master%20images%20-%20Selects%20Tier%201-4.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+  }
+  
+  .text-sub.subthird {
+    background-image: url("https://assets.codepen.io/4086427/MTB+Master+images+-+Selects+Tier+1-13.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+  }
+  
+  .text-sub.subfourth {
+    background-image: url("https://assets.codepen.io/4086427/Park+with+needle+statue+copy.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+  }
+  
+  .text-sub.subfifth {
+    background-image: url("https://uploads-ssl.webflow.com/61a80bd2a3ff0e334f69bd03/62d8800446880f50ab5b79b9_MTB%20Master%20images%20-%20Selects%20Tier%201-4.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+  }
+  
+  .text-sub.subsixth {
+    background-image: url("https://assets.codepen.io/4086427/MTB+Master+images+-+Selects+Tier+1-13.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+  }
+  
+  

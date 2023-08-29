@@ -1,0 +1,181 @@
+<html class="no-js is-home" lang="">
+
+<head>
+  <meta charset="utf-8" />
+  <title>How to create page transitions tutorial - Barba.js</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link href="css/style.css" rel="stylesheet">
+<link href="css/transition.css" rel="stylesheet">
+
+</head>
+
+<body data-barba="wrapper">
+<button class="cursors main-cursor"></button>
+<button class="cursors video-cursor"><span class="cursor-text-play">PLAY</span></button>
+<!--<button class="cursor-video-exit"><span class="cursor-text-exit">EXIT</span></button>-->
+<button class="cursor-video-exit">EXIT</button>
+<button class="cursor-read-more">READ MORE</button>
+
+
+
+
+  <!-- ELEMENT ON LOAD - WORK OUT BARBA!  
+
+<nav class="overlay-nav" style="opacity: 0; visibility: hidden;">
+  <svg class="overlay-nav_bg" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <path class="overlay-nav_path" vector-effect="non-scaling-stroke" d="M 0 0 V 0 Q 50 0 100 0 V 0 z"></path>
+</svg>
+</nav> -->
+
+  <div class="transition clip"></div>
+
+  <svg id="loadersvg" viewBox="0 0 1 1" preserveAspectRatio="none">
+    <clipPath id="clippath" clipPathUnits="objectBoundingBox">
+      <path class="swipeup" d="M 0 1 V 1 Q 0.5 1 1 1 V 1 z" />
+    </clipPath>
+  </svg>
+
+  <div class="lightbox" id="lightbox-close">
+    <div class="lightbox__top lightbox-bar"></div>
+    <div class="lightbox__content">
+      <video id="video" width="100%" height="100%" controls playsinline>
+        <source
+          src="https://media-files.vidstack.io/360p.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+    <div class="lightbox__bottom lightbox-bar"></div>
+  </div>
+
+  <div id="smooth-wrapper">
+
+
+    <div id="smooth-content">
+      <main data-barba="container" data-barba-namespace="content-strategy">
+    
+
+        <div class="cs-title-section-copy">
+          <div class="cs-top-title">CONTENT<br>STRATEGY</div>
+        </div>
+  
+        <div class="blotter-container">
+          <div class="blotterline">Content strategy</div>
+          <div class="hello"></div>
+        </div>
+  
+        <div class="cs-top-section">
+          <div class="cs-top-grid-block">
+            <div class="cs-top-duo-image"></div>
+            <div class="cs-top-text-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in porta tellus. Cras vel placerat urna, in semper justo. Sed malesuada sit amet felis eget mattis. Etiam lectus massa, suscipit vitae malesuada a, consequat sed turpis. Donec nec ante tristique, ullamcorper odio quis, fringilla nibh. Nulla facilisi. <br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in porta tellus. Cras vel placerat urna, in semper justo. Sed malesuada sit amet felis eget mattis. Etiam lectus massa, suscipit vitae malesuada a, consequat sed turpis. Donec nec ante tristique, ullamcorper odio quis, fringilla nibh. Nulla facilisi.</div>
+            <div class="cs-top-text-block right-blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in porta tellus. Cras vel placerat urna, in semper justo. Sed malesuada sit amet felis eget mattis. Etiam lectus massa, suscipit vitae malesuada a, consequat sed turpis. Donec nec ante tristique, ullamcorper odio quis, fringilla nibh. Nulla facilisi. <br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in porta tellus. Cras vel placerat urna, in semper justo. Sed malesuada sit amet felis eget mattis. Etiam lectus massa, suscipit vitae malesuada a, consequat sed turpis. Donec nec ante tristique, ullamcorper odio quis, fringilla nibh. Nulla facilisi.</div>
+            <div class="top-header-block">
+              <div class="tg-small-header">TELL&nbsp;GREAT</div>
+              <div class="s-large-header">STORIES</div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="cs-one-section">
+          <div class="cs-grid-block-1">
+            <div class="cs-top-blurb-block">
+              <div class="cs-blurb-title">KNOW YOUR AUDIENCE</div>
+              <div class="cs-section-blurb-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in porta tellus. Cras vel placerat urna, in semper justo. Sed malesuada sit amet felis eget mattis. <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in porta tellus. Cras vel placerat urna, in semper justo. Sed malesuada sit amet felis eget mattis.<br></div>
+            </div>
+            <div class="cs-top-heading">1</div>
+          </div>
+        </div>
+        <div class="cs-two-section">
+          <div class="cs-grid-block-2">
+            <div class="cs-top-blurb-block">
+              <div class="cs-blurb-title">DON'T BE A HERO</div>
+              <div class="cs-section-blurb-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in porta tellus. Cras vel placerat urna, in semper justo. Sed malesuada sit amet felis eget mattis. <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in porta tellus. Cras vel placerat urna, in semper justo. Sed malesuada sit amet felis eget mattis.<br></div>
+            </div>
+            <div class="cs-top-heading">2</div>
+          </div>
+        </div>
+        <div class="cs-three-section">
+          <div class="cs-grid-block-3">
+            <div class="cs-top-blurb-block">
+              <div class="cs-blurb-title">PROBLEM SOLVED</div>
+              <div class="cs-section-blurb-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in porta tellus. Cras vel placerat urna, in semper justo. Sed malesuada sit amet felis eget mattis. <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in porta tellus. Cras vel placerat urna, in semper justo. Sed malesuada sit amet felis eget mattis.<br></div>
+            </div>
+            <div class="cs-top-heading">3</div>
+          </div>
+        </div>
+  
+        <div class="tell-container">
+          <span class="tell">TELL</span>
+          <span class="great">GREAT</span>
+        </div>
+  
+        <div class="services-ticker-block">
+          <div class="stb_line_single">
+            <a href="#" class="stb-item">
+              <span>STORIES</span>
+            </a>
+            <a href="#" class="stb-item">
+              <span>STORIES</span>
+            </a>
+            <a href="#" class="stb-item">
+              <span>STORIES</span>
+            </a>
+            <a href="#" class="stb-item">
+              <span>STORIES</span>
+            </a>
+            <a href="#" class="stb-item">
+              <span>STORIES</span>
+            </a>
+            <a href="#" class="stb-item">
+              <span>STORIES</span>
+            </a>
+            <a href="#" class="stb-item">
+              <span>STORIES</span>
+            </a>
+          </div>
+        </div>
+  
+        <div class="ticker-container">
+          <section class="ticker" id="services">
+            <div class="container-fluid">
+              <span>GREAT GREAT GREAT GREAT GREAT GREAT GREAT</span>
+            </div>
+          </section>
+        </div>
+  
+        <div class="tgs-bottom-right-container">
+          <span class="tell-great-stories">TELL<br>GREAT<br>STORIES</span>
+        </div>
+  
+  
+        </main>
+    </div>
+    <!--smooth-content end -->
+    </div>
+    <!--smooth-wrapper end -->
+  
+
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://assets.codepen.io/4086427/ScrollSmoother.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+    <script src="https://mrc-website-assets.s3.eu-west-2.amazonaws.com/js/SplitText.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/Flip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/blotter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/channelSplitMaterial.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/Observer.min.js"></script>
+    <script src="https://matt-rudd.com/JS/DrawSVGPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.2/plyr.min.js"></script>
+    <script type="module" src="js/main.js" defer></script>
+
+
+</body>
+
+    </html>
+  
