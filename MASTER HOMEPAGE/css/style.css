@@ -242,7 +242,6 @@ p {
 }
 
 
-
 /* PAGE SETUP (UI ELEMENTS ETC.) */
 
 .menu_container {
@@ -299,6 +298,100 @@ p {
 }
 .mrc-logo-layer path {
   fill: #f4f4f4
+}
+
+/* SCHEDULE BUTTON STYLES */
+
+.schedule_hover-container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding-right: 4vw;
+  padding-bottom: 8vh;
+  opacity: 0;
+  z-index: 99999;
+}
+
+.schedule_button span {
+  pointer-events: none;
+}
+
+.schedule_button {
+	pointer-events: auto;
+	/* cursor: pointer; */
+	background: #00ffa3;
+	border: none;
+	padding: 1rem 1rem;
+	margin: 0;
+	font-family: inherit;
+	font-size: inherit;
+	position: relative;
+	display: inline-block;
+    width: 175px;
+  height: 50px;
+  cursor: none;
+}
+
+.schedule_button::before,
+.schedule_button::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+.button--calypso {
+	overflow: hidden;
+	font-family: "R-bk-med";
+	font-size: 1rem;
+	border-radius: 0.85rem;
+	color: #000;
+}
+
+.button--calypso span {
+	display: block;
+	position: relative;
+/* 	mix-blend-mode: difference; */
+	z-index: 10;
+    color: #000;
+}
+
+.button--calypso::before {
+	content: '';
+	background: #005DFF;
+	width: 120%;
+	height: 0;
+	padding-bottom: 120%;
+	top: -110%;
+	left: -10%;
+	border-radius: 50%;
+	transform: translate3d(0,68%,0) scale3d(0,0,0);
+}
+
+.button--calypso:hover::before {
+	transform: translate3d(0,0,0) scale3d(1,1,1);
+	transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+}
+
+.button--calypso::after {
+	content: '';
+	background: #005DFF;
+	transform: translate3d(0,-100%,0);
+	transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+}
+
+.button--calypso:hover::after {
+	transform: translate3d(0,0,0);
+	transition-duration: 0.05s;
+	transition-delay: 0.4s;
+	transition-timing-function: linear;
+}
+
+button > span.second_schedule-span {
+  margin-top: 49px;
+  color: #f4f4f4;
 }
 
 
@@ -410,6 +503,23 @@ h2#section_title1, #section_title2, #section_title3 {
 
 
 /* PAGE SETUP END */
+
+
+/* calendar button styles */
+
+.calendar-button {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: black;
+  font-family: "R-bk-med";
+  color: #f4f4f4;
+  z-index: 99999999999;
+  border-radius: 9999px;
+  padding: 1.5rem 1rem;
+}
+
+
 
 /* //// MAIN MENU STYLES AUG 23 //// */
 
@@ -630,7 +740,8 @@ h2#section_title1, #section_title2, #section_title3 {
 }
 
 .overlay2 {
-	/* position:fixed */
+	position:fixed;
+  width: 100%;
 }
 
 #layer_1 {
@@ -1039,7 +1150,7 @@ h2#section_title1, #section_title2, #section_title3 {
     border-radius: 50%;
     background-color: #fff;
     display: block;
-    transition-property: transform, background-color;
+    transition-property: transform, background-color, height, width;
     transition-duration: 0.2s;
     transition-timing-function: ease-in;
 }
@@ -1052,7 +1163,16 @@ h2#section_title1, #section_title2, #section_title3 {
 /** CURSOR EFEITO **/
 
 .cursor.color .dot{
-    background-color: black;
+    background-color: #00000036;
+} 
+
+.cursor.cursor_no-colour .dot{
+  background-color: #00000036;
+  width: 33%;
+  height: 33%;
+  transition-property: transform, height, width;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
 } 
 
 /** ELEMENTS EFFECT **/
@@ -1666,7 +1786,8 @@ color: #00ffa3;
 	position: relative;
 	justify-content: center;
 	font-family: 'M-light';
-  margin-top: 10rem;
+  margin: 15rem 0;
+
 }
 
 .skills_menu__item {
@@ -1755,7 +1876,7 @@ color: #00ffa3;
 	font-size: 4rem;
 	line-height: 1.2;
 	font-weight: 400;
-	padding: 1vh 1vw 0;
+	padding: 2rem 0 1.6rem 0;
 	/* text-transform: uppercase; */
 }
 
@@ -1772,8 +1893,8 @@ color: #00ffa3;
 	font-size: 4rem;
 	line-height: 1.2;
 	font-weight: 400;
-	padding: 1vh 1vw 0;
-	margin-top: 0.2rem;
+	/* padding: 1vh 1vw 0; */
+  padding: 2rem 0 1.5rem 0;
 	font-family: 'M-Black';
 	text-decoration: none;
 	-webkit-text-stroke: 2.25px #1a1a1a; 
@@ -1781,7 +1902,7 @@ color: #00ffa3;
 	/* text-transform: uppercase;*/
 	-webkit-text-fill-color: transparent;
 	/* color: #1a1a1a; */
-	margin-right: 4vw;
+	margin-right: 3.9vw;
 }
 
 .skills_marquee span {
@@ -1843,7 +1964,7 @@ z-index: -600
 }
 
 .spacer3 {
-  background:#1a1a1a;
+  background:#000;
   width: 100vw;
 height: 150vh;
 }
@@ -2988,11 +3109,11 @@ textarea {
     width: 100% !important;
     height: 100vh !important;
     margin: 0 auto;
-    background: black;
+    background: #000;
   }
 
   #spokes svg {
-    background: #1a1a1a;
+    background: #000;
   }
 
 /* END SPOKES SPIN SECTION */
@@ -3051,17 +3172,20 @@ height: 80%;
 } 
 
 footer {
- /* height: 100%; */
  width: 100vw;
  overflow: hidden;
 }
 
 
 .footer-container {
-  display: block;
+  /* display: block; */
   width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: #3a3a3a;
-  padding: 10rem 4vw;
+  padding: 20rem 4vw;
 }
 
 .footer-grid {
@@ -5424,16 +5548,16 @@ a:focus-visible {
 
 .inner-content-block {
   -webkit-text-size-adjust: 100%;
-  --text-color: #111;
-  --bg-color: #f4f4f4;
-  color: #333;
+  --text-color: #000;
+  /* --bg-color: #f4f4f4; */
+  color: #000;
   font-size: 14px;
   line-height: 20px;
   box-sizing: border-box;
   width: 100%;
   height: 80%;
   align-self: center;
-  background-color: #f4f4f4;
+  /* background-color: #f4f4f4; */
 }
 
 
@@ -5444,7 +5568,7 @@ a:focus-visible {
   justify-content: center;
   flex-direction: column;
   height: 100vh;
-  background: #1a1a1a;
+  background: #f4f4f4;
   box-sizing: border-box;
   padding: 10rem 0;
 }
@@ -5464,7 +5588,6 @@ a:focus-visible {
   --duration: 15s;
   --scroll-start: 0;
   --scroll-end: calc(-100% - var(--gap));
-  background: #1a1a1a;
     box-sizing: border-box;
 }
 
@@ -11484,6 +11607,10 @@ height: auto;
   color: #1a1a1a;
 }
 
+.oh__text-white {
+ color: #f4f4f4;
+}
+
 .line {
 	transform-origin: 0;
 	white-space: nowrap;
@@ -17154,6 +17281,7 @@ width: 50%;
 	width: 100%;
 	overflow: hidden;
   margin-top: -40rem;
+  /* margin-bottom: -10rem */
 }
 
 .gallery-wrap {
@@ -17244,7 +17372,7 @@ width: 50%;
 }
 
 .gallery--grid .gallery__item {
-	height: 33vh;
+	height: 32.95vh;
 	width: 33vw;
 }
 

@@ -239,6 +239,24 @@ $('[class*=cursor]').on({
     }
 })
 
+$('[class*=cursor]').on({
+  mouseover: function(){
+   
+      if($(this).hasClass('cursor-transparent'))
+      {
+          cursor.addClass('cursor_no-colour');
+      }
+  },
+
+
+  mouseout: function(){
+      if($(this).hasClass('cursor-transparent'))
+      {
+          cursor.removeClass('cursor_no-colour');
+      }
+  }
+})
+
 /// END NEW CURSOR JS
 
 
@@ -786,6 +804,40 @@ function initIndexAnims() {
   //     console.log('myModule was not loaded');
   //   }
   // }
+
+
+  //// SCHEDULE BUTTON CODE ////
+
+  let span = document.querySelectorAll(".hover-text span");
+let buttonContainer = document.querySelector(".schedule_hover-container");
+let scheduleButton = document.querySelector(".schedule_button");
+
+gsap.to(buttonContainer,{
+  opacity: 1,
+  duration: 2.5,
+  ease: "power2.inOut",
+})
+
+// create a GSAP animation with the new text and vertical movements
+let hover = gsap.timeline({ paused:true })
+
+hover.to(span, {
+  duration: 1,
+  y: -70, // move up by 50 pixels
+  // scaleY: 2, // scale by 2 along the y-axis
+  ease: "power2.inOut",
+});
+
+hover.to(scheduleButton, {
+  duration: 1,
+  scale: 1.1,
+  ease: "power2.inOut"
+},"<")
+
+// add event listeners for mouse enter and leave
+buttonContainer.addEventListener("mouseenter", () => hover.play(0.3)); // add delay
+buttonContainer.addEventListener("mouseleave", () => hover.reverse(0.5)); // add delay and reduce duration
+
 
   // Lottie sticker in footer cursor sync //
 
@@ -2343,7 +2395,7 @@ for (const [pos, contentItem] of contentItems.entries()) {
                 gsap.set(previewItem.DOM.img, {xPercent: 100});
                 gsap.set(previewItem.DOM.imgWrap, {xPercent: -102, opacity: 0});
 
-                gsap.set(previewItem.DOM.slideTexts, {yPercent: 100});
+                gsap.set(previewItem.DOM.slideTexts, {yPercent: 120});
                 gsap.set(previewItem.DOM.descriptions, {yPercent: 15, opacity: 0});
                 
                 gsap.set(backCtrl, {x: '+=15%', opacity: 0});
@@ -2464,7 +2516,7 @@ backCtrl.addEventListener('click', () => {
         yPercent: 15
     }, 'start')
     .to(previewItem.DOM.slideTexts, {
-        yPercent: 100
+        yPercent: 120
     }, 'start')
     .to(previewItem.DOM.img, {
         xPercent: -100,
@@ -2532,7 +2584,7 @@ let dimDiv4 = gsap.timeline({
 });
 
 dimDiv4.to(".approach_section, .worked-for-section", {
-  background: "#f4f4f4",
+  background: "#000",
   duration: 1,
   ease: "power2.out"
 })
@@ -9468,7 +9520,7 @@ uncover
 ;
 
 ScrollTrigger.create({ 
-  trigger: '.spacer2',
+  trigger: '.spacer3',
   start: 'bottom bottom',
   end: '+=75%',
   animation: uncover,
