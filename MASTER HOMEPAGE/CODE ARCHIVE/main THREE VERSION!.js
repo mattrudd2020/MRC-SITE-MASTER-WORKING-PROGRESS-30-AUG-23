@@ -1206,125 +1206,125 @@ $( "#name" ).click(function() {
  
  /// CUSTOM MESSAGING ////
  
- const name = document.getElementById('name');
- const email = document.getElementById('email');
- const message = document.getElementById('message');
- const contactForm = document.getElementById('cf');
- const errorElement = document.getElementById('error');
- const successMsg = document.getElementById('success-msg');
- const submitBtn = document.getElementById('dont-name-submit');
+//  const name = document.getElementById('name');
+//  const email = document.getElementById('email');
+//  const message = document.getElementById('message');
+//  const contactForm = document.getElementById('cf');
+//  const errorElement = document.getElementById('error');
+//  const successMsg = document.getElementById('success-msg');
+//  const submitBtn = document.getElementById('dont-name-submit');
    
- function validate(form) {
+//  function validate(form) {
  
-   if (name.value.length < 3) {
-     errorElement.innerHTML = 'Your name should be at least three characters long.';
-     return false;
-   } 
+//    if (name.value.length < 3) {
+//      errorElement.innerHTML = 'Your name should be at least three characters long.';
+//      return false;
+//    } 
    
-   if (!(email.value.includes('.') && (email.value.includes('@')))) {
-     errorElement.innerHTML = 'Please enter a valid email address.';
-     return false;
-   } 
+//    if (!(email.value.includes('.') && (email.value.includes('@')))) {
+//      errorElement.innerHTML = 'Please enter a valid email address.';
+//      return false;
+//    } 
  
-   if (!emailIsValid(email.value)) {
-     errorElement.innerHTML = 'Please enter a valid email address.';
-     return false;
-   }
+//    if (!emailIsValid(email.value)) {
+//      errorElement.innerHTML = 'Please enter a valid email address.';
+//      return false;
+//    }
  
-   if (message.value.length < 15) {
-     errorElement.innerHTML = 'Please write a longer message.';
-     return false;
-   }
+//    if (message.value.length < 15) {
+//      errorElement.innerHTML = 'Please write a longer message.';
+//      return false;
+//    }
  
-   errorElement.innerHTML = '';
+//    errorElement.innerHTML = '';
    
    
  
- /*
-   validateform();
-   setTimeout(function () {
-     successMsg.innerHTML = '';
-     document.getElementById('cf').reset();
+//  /*
+//    validateform();
+//    setTimeout(function () {
+//      successMsg.innerHTML = '';
+//      document.getElementById('cf').reset();
      
-   }, 6000);
- */  
+//    }, 6000);
+//  */  
  
-   return true;
+//    return true;
  
    
- }
+//  }
  
- const emailIsValid = email => {
-   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
- 
- 
- 
- }
- 
- /* THIS LINE IS REQUIRED TO RUN MY VALIDATION AND DISPLAY MESSAGE BELOW BUTTON, BUT WHEN PRESENT PREVENTS THE FIRING OF THE REST OF THE SCRIPT?!*/
- /* submitBtn.addEventListener("click", validate); */
+//  const emailIsValid = email => {
+//    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
  
  
- contactForm.addEventListener("submit", function(ev) {
-   ev.preventDefault();
+ 
+//  }
+ 
+//  /* THIS LINE IS REQUIRED TO RUN MY VALIDATION AND DISPLAY MESSAGE BELOW BUTTON, BUT WHEN PRESENT PREVENTS THE FIRING OF THE REST OF THE SCRIPT?!*/
+//  /* submitBtn.addEventListener("click", validate); */
+ 
+ 
+//  contactForm.addEventListener("submit", function(ev) {
+//    ev.preventDefault();
    
    
  
-   // do validation
+//    // do validation
   
-   if (!validate(contactForm)) {
-     return;
-   }
+//    if (!validate(contactForm)) {
+//      return;
+//    }
  
    
-   // do animation
-   submitBtn.classList.add("is-active");
-   setTimeout(function() {
-     submitBtn.classList.remove("is-active");
+//    // do animation
+//    submitBtn.classList.add("is-active");
+//    setTimeout(function() {
+//      submitBtn.classList.remove("is-active");
  
-     actual_submit();
-   }, 4000);
+//      actual_submit();
+//    }, 4000);
  
-   setTimeout(function () {
-   successMsg.innerHTML = 'Thank you! I will get back to you as soon as possible.'; 
-   }, 2000);
+//    setTimeout(function () {
+//    successMsg.innerHTML = 'Thank you! I will get back to you as soon as possible.'; 
+//    }, 2000);
    
-    setTimeout(function () {
-      successMsg.innerHTML = '';
-         document.getElementById('cf').reset();
+//     setTimeout(function () {
+//       successMsg.innerHTML = '';
+//          document.getElementById('cf').reset();
      
-   }, 4000);
+//    }, 4000);
  
- })
- 
- 
- 
- function actual_submit() {
-   console.log("doing ajax");
-   setTimeout(function() {
-     console.log("ajax completed")
-   }, 500);
- }
- 
- $(function () {
- 
-         $('#cf').on('submit', function (e) {
- 
-           $.ajax({
-             type: 'post',
-             url: 'https://matt-rudd.com/message.php',
-             data: $('form').serialize(),
-             success: function () {
-               console.log("MESSAGE SENT VIA PHP");
-             }
-           });
- 
-         });
- 
-       });
+//  })
  
  
- console.log("REACHED END");
+ 
+//  function actual_submit() {
+//    console.log("doing ajax");
+//    setTimeout(function() {
+//      console.log("ajax completed")
+//    }, 500);
+//  }
+ 
+//  $(function () {
+ 
+//          $('#cf').on('submit', function (e) {
+ 
+//            $.ajax({
+//              type: 'post',
+//              url: 'https://matt-rudd.com/message.php',
+//              data: $('form').serialize(),
+//              success: function () {
+//                console.log("MESSAGE SENT VIA PHP");
+//              }
+//            });
+ 
+//          });
+ 
+//        });
+ 
+ 
+//  console.log("REACHED END");
  
  
 
