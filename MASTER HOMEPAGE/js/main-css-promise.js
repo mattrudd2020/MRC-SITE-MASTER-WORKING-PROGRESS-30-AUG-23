@@ -2679,9 +2679,9 @@ dimDiv4.to(".approach_section, .worked-for-section", {
       ease: "power2.inOut"
     },
     scrollTrigger: {
-      trigger: ".threejs_contours-wrapper",
+      trigger: ".three-js-section",
       start: "top top",
-      end: "bottom top-=1900",
+      end: "bottom top-=1200",
       pin: true,
       pinSpacing: true,
       scrub: 0.1,
@@ -2732,56 +2732,61 @@ ScrollTrigger.refresh();
   }
   window.addEventListener("resize", onWindowResize, false);
   
+  
+  
+  
+  
+
     //// END THREE.JS SECTION ////
 
     //// START THREE CONTOURS FADE IN
 
-let tlcontoursFade2 = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".threejs_contours-wrapper",
-    start: "top 25%",
-    end: "bottom top",
-    scrub: true,
-    toggleActions: "play reverse play reverse",
-    markers: true
-  }
-});
-tlcontoursFade2.to("#three-section", { opacity: 1, duration: 1 });
-tlcontoursFade2.to("#three-section", { opacity: 0.4, duration: 2 },">");
+// let tlcontoursFade2 = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: ".threejs_contours-wrapper",
+//     start: "top 25%",
+//     end: "bottom top",
+//     scrub: true,
+//     toggleActions: "play reverse play reverse",
+//     markers: true
+//   }
+// });
+// tlcontoursFade2.to("#three-section", { opacity: 1, duration: 1 });
+// tlcontoursFade2.to("#three-section", { opacity: 0.4, duration: 2 },">");
 
-const logoTitleQuote3 = new SplitText(".quote-2", {
-  type: "lines",
-  linesClass: "split-child"
-});
+// const logoTitleQuote3 = new SplitText(".quote-2", {
+//   type: "lines",
+//   linesClass: "split-child"
+// });
 
-const logoTitleQuote4 = new SplitText(".quoter-2", {
-  type: "lines",
-  linesClass: "split-child"
-});
+// const logoTitleQuote4 = new SplitText(".quoter-2", {
+//   type: "lines",
+//   linesClass: "split-child"
+// });
 
-let tlQuoteFade2 = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".quote-2",
-    start: "top top",
-    end: "bottom top-=1000",
-    toggleActions: "play complete reverse none",
-    markers: { startColor: "teal", endColor: "coral", indent: "200px" }
-  }
-});
+// let tlQuoteFade2 = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: ".quote-2",
+//     start: "top top",
+//     end: "bottom top-=1000",
+//     toggleActions: "play complete reverse none",
+//     markers: { startColor: "teal", endColor: "coral", indent: "200px" }
+//   }
+// });
 
-tlQuoteFade2.from(logoTitleQuote3.lines, {
-  duration: 2.5,
-  yPercent: 200,
-  ease: "power4",
-  stagger: 0.1
-});
+// tlQuoteFade2.from(logoTitleQuote3.lines, {
+//   duration: 2.5,
+//   yPercent: 200,
+//   ease: "power4",
+//   stagger: 0.1
+// });
 
-tlQuoteFade2.from(logoTitleQuote4.lines, {
-  duration: 2.5,
-  yPercent: 110,
-  ease: "power4",
-  stagger: 0.1
-},">-=0.75");
+// tlQuoteFade2.from(logoTitleQuote4.lines, {
+//   duration: 2.5,
+//   yPercent: 110,
+//   ease: "power4",
+//   stagger: 0.1
+// },">-=0.75");
 
 
 
@@ -2831,16 +2836,16 @@ ScrollTrigger.refresh()
 // END COLOUR CHANGE CODE ////
 
 
+
    //// START CIRCLE GROW
  
 
-  gsap.timeline({
+   gsap.timeline({
     scrollTrigger: {
       trigger: ".container-circle",
       pin: true,
       start: "top top",
       end: "bottom middle",
-      pinSpacing: false,
       scrub: 1,
       markers: { startColor: "yellow", endColor: "coral", indent: "200px" }
     }
@@ -2884,6 +2889,7 @@ ScrollTrigger.refresh()
      console.log("CIRCLE GROW new MASTER TL SETUP");
 
   //// END CIRCLE GROW
+
 
 
 
@@ -3053,7 +3059,8 @@ $( "#name" ).click(function() {
  
  console.log("REACHED END");
  
- 
+ console.log("contact form set sep23");
+
 
 //// END CONTACT FORM CODE
 
@@ -3101,29 +3108,33 @@ ScrollTrigger.sort();
 return animation;   
 }
 //Not loading after above animation!?//
-const boxes = gsap.utils.toArray('.box');
+// const boxes = gsap.utils.toArray('.box');
 
 // Set things up
-gsap.set(boxes, {autoAlpha: 0, y: 100});
+// gsap.set(boxes, {autoAlpha: 0, y: 100});
 
-boxes.forEach((box, i) => {
-// Set up your animation
-const anim = gsap.to(box, {delay: 1, duration: 2, autoAlpha: 1, y: 0, ease:"power3", paused: true});
+// boxes.forEach((box, i) => {
+// // Set up your animation
+// const anim = gsap.to(box, {delay: 1, duration: 2, autoAlpha: 1, y: 0, ease:"power3", paused: true});
 
 // Use callbacks to control the state of the animation
-ScrollTrigger.create({
-  trigger: box,
-  pinnedContainer: ".spacer3",
-  end: "top top",
-  once: true,
-  markers: true,
-  onEnter: self => {
-    // If it's scrolled past, set the state
-    // If it's scrolled to, play it
-    self.progress === 1 ? anim.progress(1) : anim.play()
-  }
-});
-});
+// ScrollTrigger.create({
+//   trigger: box,
+//   pinnedContainer: ".spacer3",
+//   end: "top top",
+//   once: true,
+//   markers: true,
+//   onEnter: self => {
+//     // If it's scrolled past, set the state
+//     // If it's scrolled to, play it
+//     self.progress === 1 ? anim.progress(1) : anim.play()
+//   }
+// });
+// });
+
+
+console.log("spokes set sep23");
+
 
 
 //// END SPOKES SPIN CODE ////
@@ -3148,10 +3159,17 @@ ScrollTrigger.create({
   markers: false,
  
 }) 
+
+
 //// END FOOTER CODE
+
+console.log("FOOTER set sep23");
+
 
 ScrollTrigger.refresh();
 console.log("STs REFRESHED!");
+
+console.log("final ST refresh sep23");
  
 } ///END INDEXANITANIMS FUNCTION
 
@@ -7597,18 +7615,18 @@ tl6.from(childSplit3.lines, {
  
   // Lottie back home sticker //
 
-  LottieInteractivity.create({
-    player: '#bh-sticker',
-    mode: 'cursor',
-    container: '#smooth-content',
-    actions: [
-        {
-            position: { x: [0, 1], y: [0, 1] },
-            type: 'seek',
-            frames: [0, 75],
-        }
-    ]
-  });
+  // LottieInteractivity.create({
+  //   player: '#bh-sticker',
+  //   mode: 'cursor',
+  //   container: '#smooth-content',
+  //   actions: [
+  //       {
+  //           position: { x: [0, 1], y: [0, 1] },
+  //           type: 'seek',
+  //           frames: [0, 75],
+  //       }
+  //   ]
+  // });
   
 ///// END COPYWRITING CODE /////
   
